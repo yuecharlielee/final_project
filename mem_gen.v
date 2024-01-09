@@ -42,10 +42,10 @@ module mem_addr_gen(
     //wire in_circle = in_circle_0 || in_circle_1 || in_circle_2 || in_circle_3 || in_circle_4 || in_circle_5; 
     always @ (*) begin
         if(in_circle) begin
-            pixel_addr = 17'd4000;
+            pixel_addr = 17'd20000;
         end
         else begin
-            if(v_cnt_rs < `up_bound || h_cnt_rs <= `left_bound || h_cnt_rs >= `right_bound) begin
+            if(v_cnt_rs < `up_bound) begin
                 pixel_addr = 0;
             end
             else begin

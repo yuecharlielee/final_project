@@ -36,48 +36,48 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
             counter <= 10'd0;
             state <= `select_state;
 
-            x_0 <= `ball_size_0;
-            y_0 <= `ball_size_0;
-            s_0 <= `ball_size_2;
+            x_pos <= 10'd170;
+            y_pos <= 10'd50;
+            s_0 <= `ball_size_3;
             
-            x_1 <= `ball_size_0;
-            y_1 <= `ball_size_0;
+            x_1 <= `start_pos_x;
+            y_1 <= `start_pos_y;
             s_1 <= `ball_size_0;
 
-            x_2 <= `ball_size_0;
-            y_2 <= `ball_size_0;
+            x_2 <= `start_pos_x;
+            y_2 <= `start_pos_y;
             s_2 <= `ball_size_0;
 
-            x_3 <= `ball_size_0;
-            y_3 <= `ball_size_0;
+            x_3 <= `start_pos_x;
+            y_3 <= `start_pos_y;
             s_3 <= `ball_size_0;
 
-            x_4 <= `ball_size_0;
-            y_4 <= `ball_size_0;
+            x_4 <= `start_pos_x;
+            y_4 <= `start_pos_y;
             s_4 <= `ball_size_0;
 
-            x_5 <= `ball_size_0;
-            y_5 <= `ball_size_0;
+            x_5 <= `start_pos_x;
+            y_5 <= `start_pos_y;
             s_5 <= `ball_size_0;
 
-            x_6 <= `ball_size_0;
-            y_6 <= `ball_size_0;
+            x_6 <= `start_pos_x;
+            y_6 <= `start_pos_y;
             s_6 <= `ball_size_0;
 
-            x_7 <= `ball_size_0;
-            y_7 <= `ball_size_0;
+            x_7 <= `start_pos_x;
+            y_7 <= `start_pos_y;
             s_7 <= `ball_size_0;
 
-            x_8 <= `ball_size_0;
-            y_8 <= `ball_size_0;
+            x_8 <= `start_pos_x;
+            y_8 <= `start_pos_y;
             s_8 <= `ball_size_0;
 
-            x_9 <= `ball_size_0;
-            y_9 <= `ball_size_0;
+            x_9 <= `start_pos_x;
+            y_9 <= `start_pos_y;
             s_9 <= `ball_size_0;
 
             x_pos <= 10'd170;
-            y_pos <= `up_bound - `ball_size_0;
+            y_pos <= `up_bound;
 
         end
         else begin
@@ -126,6 +126,7 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_y_pos = `up_bound - ball_size;
                 if(falling == 1'b1 || test_falling == 1'b1) begin
                     next_state = `falling_state;
+                    next_x_pos = x_pos;
                 end
                 else begin
                     next_state = `select_state;
