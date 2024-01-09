@@ -17,8 +17,8 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
 
     wire next_falling, next_left, next_right;
 
-    wire [9:0] x_pos[9:0];
-    wire [9:0] y_pos[9:0];
+    wire [11:0] x_pos[11:0];
+    wire [11:0] y_pos[11:0];
     wire [9:0] state[9:0];
 
 

@@ -15,7 +15,7 @@
 `define finish_state 2
 
 //type of ball
-`define ball_size_0 5
+`define ball_size_0 0
 `define ball_size_1 10
 `define ball_size_2 20
 `define ball_size_3 30
