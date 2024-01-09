@@ -140,8 +140,8 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet D:/hardware_design/final_test/final_project/final/final.runs/synth_1/top.dcp
-  read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
   read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/hardware_design/final_test/final_project/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }

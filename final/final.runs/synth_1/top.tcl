@@ -101,10 +101,10 @@ read_verilog -library xil_defaultlib {
   D:/hardware_design/final_test/final_project/vga.v
   D:/hardware_design/final_test/final_project/top.v
 }
-read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
-
 read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all d:/hardware_design/final_test/final_project/final/final.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
+read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -118,6 +118,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/hardware_design/final_test/final_project/Basys3_Master.xdc
 set_property used_in_implementation false [get_files D:/hardware_design/final_test/final_project/Basys3_Master.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

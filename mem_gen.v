@@ -45,7 +45,7 @@ module mem_addr_gen(
             pixel_addr = 17'd4000;
         end
         else begin
-            if(v_cnt_rs <= `up_bound || h_cnt_rs <= `left_bound || h_cnt_rs >= `right_bound) begin
+            if(v_cnt_rs < `up_bound || h_cnt_rs <= `left_bound || h_cnt_rs >= `right_bound) begin
                 pixel_addr = 0;
             end
             else begin
