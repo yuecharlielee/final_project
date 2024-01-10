@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Jan 10 01:22:33 2024
+-- Date        : Wed Jan 10 13:18:47 2024
 -- Host        : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/hardware_design/final_test/final_project/final/final.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl

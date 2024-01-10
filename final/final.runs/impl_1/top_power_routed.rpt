@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Jan 10 02:21:10 2024
+| Date             : Wed Jan 10 14:59:41 2024
 | Host             : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.103        |
+| Total On-Chip Power (W)  | 0.104        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.030        |
+| Dynamic (W)              | 0.031        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.5         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.005 |     3371 |       --- |             --- |
-|   LUT as Logic |     0.004 |     1741 |     20800 |            8.37 |
-|   CARRY4       |    <0.001 |      222 |      8150 |            2.72 |
-|   Register     |    <0.001 |      971 |     41600 |            2.33 |
+| Slice Logic    |     0.005 |     3389 |       --- |             --- |
+|   LUT as Logic |     0.004 |     1744 |     20800 |            8.38 |
+|   CARRY4       |    <0.001 |      230 |      8150 |            2.82 |
+|   Register     |    <0.001 |      977 |     41600 |            2.35 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |    <0.001 |      118 |     32600 |            0.36 |
 |   Others       |     0.000 |       72 |       --- |             --- |
-| Signals        |     0.005 |     2859 |       --- |             --- |
+| Signals        |     0.006 |     2873 |       --- |             --- |
 | Block RAM      |    <0.001 |     26.5 |        50 |           53.00 |
 | DSPs           |     0.015 |       30 |        90 |           33.33 |
 | I/O            |     0.002 |       22 |       106 |           20.75 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.103 |          |           |                 |
+| Total          |     0.104 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -144,7 +144,7 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| top                 |     0.030 |
+| top                 |     0.031 |
 |   VC0               |     0.001 |
 |   key_de            |     0.002 |
 |   mem_addr_gen_inst |     0.022 |

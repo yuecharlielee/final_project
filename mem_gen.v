@@ -45,12 +45,7 @@ module mem_addr_gen(
             pixel_addr = 17'd20000;
         end
         else begin
-            if(v_cnt_rs < `up_bound) begin
-                pixel_addr = 0;
-            end
-            else begin
-                pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
-            end
+            pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
         end
         
     end
