@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jan 10 14:59:40 2024
+| Date         : Wed Jan 10 22:30:36 2024
 | Host         : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -315,87 +315,87 @@ Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin VC0/pixel_cnt_reg[8]/C is not reached by a timing clock
+The clock pin VC0/pixel_cnt_reg[7]_rep/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin VC0/pixel_cnt_reg[9]/C is not reached by a timing clock
+The clock pin VC0/pixel_cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin VC0/vsync_i_reg/C is not reached by a timing clock
+The clock pin VC0/pixel_cnt_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_01/CLK is not reached by a timing clock
+The clock pin VC0/vsync_i_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_11/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_01/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_21/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_11/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_31/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_21/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_41/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_31/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_51/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_41/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_61/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_51/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_71/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_61/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_81/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_71/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin mem_addr_gen_inst/in_circle_91/CLK is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_81/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/FSM_sequential_state_reg[0]/C is not reached by a timing clock
+The clock pin mem_addr_gen_inst/in_circle_91/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/FSM_sequential_state_reg[1]/C is not reached by a timing clock
+The clock pin pc/FSM_sequential_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#72 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/ball_size_reg[0]/C is not reached by a timing clock
+The clock pin pc/FSM_sequential_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#73 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/ball_size_reg[1]/C is not reached by a timing clock
+The clock pin pc/ball_size_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#74 Critical Warning
@@ -470,12 +470,12 @@ Related violations: <none>
 
 TIMING-17#88 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_1_reg[2]/C is not reached by a timing clock
+The clock pin pc/s_1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_2_reg[0]/C is not reached by a timing clock
+The clock pin pc/s_2_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Critical Warning
@@ -485,17 +485,17 @@ Related violations: <none>
 
 TIMING-17#91 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_4_reg[2]/C is not reached by a timing clock
+The clock pin pc/s_4_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_5_reg[2]/C is not reached by a timing clock
+The clock pin pc/s_5_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_6_reg[0]/C is not reached by a timing clock
+The clock pin pc/s_6_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Critical Warning
@@ -505,12 +505,12 @@ Related violations: <none>
 
 TIMING-17#95 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_8_reg[2]/C is not reached by a timing clock
+The clock pin pc/s_8_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#96 Critical Warning
 Non-clocked sequential cell  
-The clock pin pc/s_9_reg[0]/C is not reached by a timing clock
+The clock pin pc/s_9_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#97 Critical Warning

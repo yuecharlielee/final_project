@@ -3,7 +3,7 @@
 module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync, btnC, btnL, btnR, finish);
     input clk, rst, btnC, btnL, btnR;
     inout PS2_DATA, PS2_CLK;
-    output [3:0] vgaRed, vgaGreen, vgaBlue;
+    output wire [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;
     output wire finish;
 
@@ -24,11 +24,11 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
 
     wire [11:0] data;
     wire [16:0] pixel_addr;
-    wire [11:0] pixel;
+    wire [11:0] pixel_back;
     wire [9:0] h_cnt; //640
     wire [9:0] v_cnt;  //480
 
-    assign {vgaRed, vgaGreen, vgaBlue} = (valid==1'b1) ? pixel:12'h0;
+    
 
     //clk
     clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
@@ -38,7 +38,7 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     assign next_left = btnL;
     
     Keyboard_control key_ctrl(
-         .clk(clk),
+         .clk(clk_d22),
          .rst(rst),
          .key_down(key_down), 
          .last_change(last_change), 
@@ -103,7 +103,9 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     mem_addr_gen mem_addr_gen_inst(
         .h_cnt(h_cnt),
         .v_cnt(v_cnt),
+        .valid(valid),
         .pixel_addr(pixel_addr),
+        .pixel_back(pixel_back),
         .x_0(x_pos[0]),
         .y_0(y_pos[0]),
         .s_0(state[0]),
@@ -133,7 +135,10 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .s_8(state[8]),
         .x_9(x_pos[9]),
         .y_9(y_pos[9]),
-        .s_9(state[9])
+        .s_9(state[9]),
+        .vgaRed(vgaRed),
+        .vgaGreen(vgaGreen),
+        .vgaBlue(vgaBlue)
     );
 
     blk_mem_gen_0 BMG0(
@@ -141,7 +146,7 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .wea(0),
         .addra(pixel_addr),
         .dina(data[11:0]),
-        .douta(pixel)
+        .douta(pixel_back)
     );
 
 
