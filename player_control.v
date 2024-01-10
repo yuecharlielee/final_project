@@ -445,9 +445,9 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
     always @(*) begin
         case(counter)
             10'd0:begin
-                next_ball_size = `ball_size_2;
+                next_ball_size = `ball_size_3;
 
-                next_s_0 = `ball_size_2;
+                next_s_0 = `ball_size_3;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
                 next_s_3 = s_3;
@@ -474,11 +474,11 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
 
             end
             10'd2:begin
-                next_ball_size = `ball_size_3;
+                next_ball_size = `ball_size_4;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
-                next_s_2 = `ball_size_3;
+                next_s_2 = `ball_size_4;
                 next_s_3 = s_3;
                 next_s_4 = s_4;
                 next_s_5 = s_5;
@@ -488,12 +488,12 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd3:begin
-                next_ball_size = `ball_size_4;
+                next_ball_size = `ball_size_1;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
-                next_s_3 = `ball_size_4;
+                next_s_3 = `ball_size_1;
                 next_s_4 = s_4;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
@@ -530,7 +530,7 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd6:begin
-                next_ball_size = `ball_size_3;
+                next_ball_size = `ball_size_1;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
@@ -538,13 +538,13 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_3 = s_3;
                 next_s_4 = s_4;
                 next_s_5 = s_5;
-                next_s_6 = `ball_size_3;
+                next_s_6 = `ball_size_1;
                 next_s_7 = s_7;
                 next_s_8 = s_8;
                 next_s_9 = s_9;
             end
             10'd7:begin
-                next_ball_size = `ball_size_4;
+                next_ball_size = `ball_size_2;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
@@ -553,11 +553,25 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_4 = s_4;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
-                next_s_7 = `ball_size_4;
+                next_s_7 = `ball_size_2;
                 next_s_8 = s_8;
                 next_s_9 = s_9;
             end
             10'd8:begin
+                next_ball_size = `ball_size_3;
+
+                next_s_0 = s_0;
+                next_s_1 = s_1;
+                next_s_2 = s_2;
+                next_s_3 = s_3;
+                next_s_4 = s_4;
+                next_s_5 = s_5;
+                next_s_6 = s_6;
+                next_s_7 = s_7;
+                next_s_8 = `ball_size_3;
+                next_s_9 = s_9;
+            end
+            10'd9:begin
                 next_ball_size = `ball_size_2;
 
                 next_s_0 = s_0;
@@ -568,22 +582,8 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_5 = s_5;
                 next_s_6 = s_6;
                 next_s_7 = s_7;
-                next_s_8 = `ball_size_2;
-                next_s_9 = s_9;
-            end
-            10'd9:begin
-                next_ball_size = `ball_size_3;
-
-                next_s_0 = s_0;
-                next_s_1 = s_1;
-                next_s_2 = s_2;
-                next_s_3 = s_3;
-                next_s_4 = s_4;
-                next_s_5 = s_5;
-                next_s_6 = s_6;
-                next_s_7 = s_7;
                 next_s_8 = s_8;
-                next_s_9 = `ball_size_3;
+                next_s_9 = `ball_size_2;
             end
             default:begin
                 next_ball_size = `ball_size_0;

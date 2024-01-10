@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jan 10 22:30:35 2024
+| Date         : Thu Jan 11 01:19:29 2024
 | Host         : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 105
+             Violations found: 130
 +--------+----------+------------------------+------------+
 | Rule   | Severity | Description            | Violations |
 +--------+----------+------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining       | 50         |
-| DPOP-1 | Warning  | PREG Output pipelining | 35         |
+| DPIP-1 | Warning  | Input pipelining       | 70         |
+| DPOP-1 | Warning  | PREG Output pipelining | 40         |
 | DPOP-2 | Warning  | MREG Output pipelining | 20         |
 +--------+----------+------------------------+------------+
 
@@ -237,52 +237,152 @@ Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr0 input mem_addr_gen_inst/pixel_addr0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out input mem_addr_gen_inst/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__0 input mem_addr_gen_inst/pixel_addr0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out input mem_addr_gen_inst/p_1_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__1 input mem_addr_gen_inst/pixel_addr0__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__0 input mem_addr_gen_inst/p_1_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__2 input mem_addr_gen_inst/pixel_addr0__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__0 input mem_addr_gen_inst/p_1_out__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__3 input mem_addr_gen_inst/pixel_addr0__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__1 input mem_addr_gen_inst/p_1_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr2 input mem_addr_gen_inst/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__1 input mem_addr_gen_inst/p_1_out__1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr2__0 input mem_addr_gen_inst/pixel_addr2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__2 input mem_addr_gen_inst/p_1_out__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#48 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr2__1 input mem_addr_gen_inst/pixel_addr2__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__2 input mem_addr_gen_inst/p_1_out__2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#49 Warning
 Input pipelining  
-DSP mem_addr_gen_inst/pixel_addr2__2 input mem_addr_gen_inst/pixel_addr2__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP mem_addr_gen_inst/p_1_out__3 input mem_addr_gen_inst/p_1_out__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#50 Warning
 Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__3 input mem_addr_gen_inst/p_1_out__3/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#51 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__4 input mem_addr_gen_inst/p_1_out__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#52 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__4 input mem_addr_gen_inst/p_1_out__4/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#53 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__5 input mem_addr_gen_inst/p_1_out__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#54 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__5 input mem_addr_gen_inst/p_1_out__5/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#55 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__6 input mem_addr_gen_inst/p_1_out__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#56 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__6 input mem_addr_gen_inst/p_1_out__6/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#57 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__7 input mem_addr_gen_inst/p_1_out__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#58 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__7 input mem_addr_gen_inst/p_1_out__7/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#59 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__8 input mem_addr_gen_inst/p_1_out__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#60 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/p_1_out__8 input mem_addr_gen_inst/p_1_out__8/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#61 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2 input mem_addr_gen_inst/pixel_addr2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#62 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__0 input mem_addr_gen_inst/pixel_addr2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#63 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__1 input mem_addr_gen_inst/pixel_addr2__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#64 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__2 input mem_addr_gen_inst/pixel_addr2__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#65 Warning
+Input pipelining  
 DSP mem_addr_gen_inst/pixel_addr2__3 input mem_addr_gen_inst/pixel_addr2__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#66 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__4 input mem_addr_gen_inst/pixel_addr2__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#67 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__5 input mem_addr_gen_inst/pixel_addr2__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#68 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__6 input mem_addr_gen_inst/pixel_addr2__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#69 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__7 input mem_addr_gen_inst/pixel_addr2__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#70 Warning
+Input pipelining  
+DSP mem_addr_gen_inst/pixel_addr2__8 input mem_addr_gen_inst/pixel_addr2__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
@@ -437,27 +537,52 @@ Related violations: <none>
 
 DPOP-1#31 Warning
 PREG Output pipelining  
-DSP mem_addr_gen_inst/pixel_addr0 output mem_addr_gen_inst/pixel_addr0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP mem_addr_gen_inst/p_1_out output mem_addr_gen_inst/p_1_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#32 Warning
 PREG Output pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__0 output mem_addr_gen_inst/pixel_addr0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP mem_addr_gen_inst/p_1_out__0 output mem_addr_gen_inst/p_1_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#33 Warning
 PREG Output pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__1 output mem_addr_gen_inst/pixel_addr0__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP mem_addr_gen_inst/p_1_out__1 output mem_addr_gen_inst/p_1_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#34 Warning
 PREG Output pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__2 output mem_addr_gen_inst/pixel_addr0__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP mem_addr_gen_inst/p_1_out__2 output mem_addr_gen_inst/p_1_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#35 Warning
 PREG Output pipelining  
-DSP mem_addr_gen_inst/pixel_addr0__3 output mem_addr_gen_inst/pixel_addr0__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP mem_addr_gen_inst/p_1_out__3 output mem_addr_gen_inst/p_1_out__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#36 Warning
+PREG Output pipelining  
+DSP mem_addr_gen_inst/p_1_out__4 output mem_addr_gen_inst/p_1_out__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#37 Warning
+PREG Output pipelining  
+DSP mem_addr_gen_inst/p_1_out__5 output mem_addr_gen_inst/p_1_out__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#38 Warning
+PREG Output pipelining  
+DSP mem_addr_gen_inst/p_1_out__6 output mem_addr_gen_inst/p_1_out__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#39 Warning
+PREG Output pipelining  
+DSP mem_addr_gen_inst/p_1_out__7 output mem_addr_gen_inst/p_1_out__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#40 Warning
+PREG Output pipelining  
+DSP mem_addr_gen_inst/p_1_out__8 output mem_addr_gen_inst/p_1_out__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning

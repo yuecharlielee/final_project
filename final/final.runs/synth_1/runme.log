@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27756
+INFO: [Synth 8-7075] Helper process launched with PID 13748
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1017.129 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [D:/hardware_design/final_test/final_project/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/hardware_design/final_test/final_project/clock_divisor.v:1]
@@ -47,8 +47,8 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [D:/hardware_design/f
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-31156-DESKTOP-IIDP9S7/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (3#1) [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-31156-DESKTOP-IIDP9S7/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-7972-DESKTOP-IIDP9S7/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (3#1) [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-7972-DESKTOP-IIDP9S7/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'OnePulse' [D:/hardware_design/final_test/final_project/onepulse.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (4#1) [D:/hardware_design/final_test/final_project/onepulse.v:1]
 INFO: [Synth 8-226] default block is never used [D:/hardware_design/final_test/final_project/KeyboardDecoder.v:69]
@@ -75,24 +75,24 @@ WARNING: [Synth 8-689] width (10) of port connection 's_8' does not match port w
 WARNING: [Synth 8-689] width (10) of port connection 's_9' does not match port width (12) of module 'player_control' [D:/hardware_design/final_test/final_project/top.v:99]
 INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [D:/hardware_design/final_test/final_project/mem_gen.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (7#1) [D:/hardware_design/final_test/final_project/mem_gen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-31156-DESKTOP-IIDP9S7/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-31156-DESKTOP-IIDP9S7/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-7972-DESKTOP-IIDP9S7/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [D:/hardware_design/final_test/final_project/final/final.runs/synth_1/.Xil/Vivado-7972-DESKTOP-IIDP9S7/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [D:/hardware_design/final_test/final_project/vga.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (9#1) [D:/hardware_design/final_test/final_project/vga.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'top' (10#1) [D:/hardware_design/final_test/final_project/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1017.129 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1017.129 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1017.129 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1017.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1014.410 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -107,20 +107,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1079.586 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1079.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1079.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1079.125 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1079.586 ; gain = 62.457
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1079.125 ; gain = 64.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1079.586 ; gain = 62.457
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1079.125 ; gain = 64.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -132,7 +132,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  d:
 Applied set_property KEEP_HIERARCHY = SOFT for key_de/inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for BMG0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1079.586 ; gain = 62.457
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1079.125 ; gain = 64.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'player_control'
@@ -155,7 +155,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'player_control'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1079.586 ; gain = 62.457
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1079.125 ; gain = 64.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -179,14 +179,14 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input  512 Bit        Muxes := 1     
-	   2 Input   17 Bit        Muxes := 12    
-	   5 Input   17 Bit        Muxes := 10    
+	   2 Input   17 Bit        Muxes := 22    
+	   5 Input   17 Bit        Muxes := 20    
 	   2 Input   12 Bit        Muxes := 1     
 	   3 Input   12 Bit        Muxes := 2     
 	   4 Input   10 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
-	   2 Input    5 Bit        Muxes := 1     
-	  11 Input    5 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	  11 Input    6 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 3     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 5     
@@ -292,106 +292,106 @@ DSP Report: operator in_circle_02 is absorbed into DSP in_circle_02.
 DSP Report: operator in_circle_02 is absorbed into DSP in_circle_02.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP pixel_addr2, operation Mode is: A*(B:0x140).
 DSP Report: operator pixel_addr2 is absorbed into DSP pixel_addr2.
-DSP Report: Generating DSP pixel_addr0, operation Mode is: PCIN+(A:0x0):B+(C:0xb19a).
-DSP Report: operator pixel_addr0 is absorbed into DSP pixel_addr0.
+DSP Report: Generating DSP p_1_out, operation Mode is: PCIN+(A:0x0):B+C.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1079.586 ; gain = 62.457
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1079.125 ; gain = 64.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping	Report (see note below)
-+-------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name  | DSP Mapping               | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*B                       | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|mem_addr_gen | A*(B:0x140)               | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mem_addr_gen | PCIN+(A:0x0):B+(C:0xb19a) | 30     | 9      | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-+-------------+---------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*B              | 21     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|mem_addr_gen | A*(B:0x140)      | 17     | 9      | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mem_addr_gen | PCIN+(A:0x0):B+C | 30     | 9      | 17     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -401,19 +401,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1103.883 ; gain = 86.754
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1101.996 ; gain = 87.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1125.250 ; gain = 108.121
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1123.664 ; gain = 109.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1136.984 ; gain = 119.855
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1142.359 ; gain = 127.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -443,37 +443,37 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[2
 CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -494,41 +494,41 @@ Report Cell Usage:
 |1     |KeyboardCtrl |     1|
 |2     |blk_mem_gen  |     1|
 |3     |BUFG         |     2|
-|4     |CARRY4       |   286|
-|5     |DSP48E1      |    40|
-|8     |LUT1         |   201|
-|9     |LUT2         |   642|
-|10    |LUT3         |    94|
-|11    |LUT4         |   128|
-|12    |LUT5         |   144|
-|13    |LUT6         |   203|
+|4     |CARRY4       |   308|
+|5     |DSP48E1      |    50|
+|8     |LUT1         |   374|
+|9     |LUT2         |   630|
+|10    |LUT3         |    84|
+|11    |LUT4         |   133|
+|12    |LUT5         |   171|
+|13    |LUT6         |   270|
 |14    |FDCE         |    18|
-|15    |FDRE         |   250|
+|15    |FDRE         |   254|
 |16    |FDSE         |    89|
 |17    |IBUF         |     5|
 |18    |OBUF         |    15|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 12 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1145.781 ; gain = 66.195
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1145.781 ; gain = 128.652
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1151.195 ; gain = 72.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1151.195 ; gain = 136.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1161.852 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 326 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1163.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 358 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1161.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1165.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 51 Infos, 10 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1161.852 ; gain = 144.723
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1165.477 ; gain = 151.066
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/hardware_design/final_test/final_project/final/final.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 10 22:29:24 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 11 01:18:14 2024...

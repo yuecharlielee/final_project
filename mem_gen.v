@@ -53,16 +53,16 @@ module mem_addr_gen(
                 if(in_circle_0) begin
                     case(s_0)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_0) + 320 * (v_cnt_rs - y_0));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_0) + 320 * (v_cnt_rs - y_0));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_0) + 320 * (v_cnt_rs - y_0));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_0) + 320 * (v_cnt_rs - y_0));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -72,16 +72,16 @@ module mem_addr_gen(
                 else if(in_circle_1) begin
                     case(s_1)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_1) + 320 * (v_cnt_rs - y_1));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_1) + 320 * (v_cnt_rs - y_1));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_1) + 320 * (v_cnt_rs - y_1));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_1) + 320 * (v_cnt_rs - y_1));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -91,16 +91,16 @@ module mem_addr_gen(
                 else if(in_circle_2) begin
                     case(s_2)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_2) + 320 * (v_cnt_rs - y_2));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_2) + 320 * (v_cnt_rs - y_2));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_2) + 320 * (v_cnt_rs - y_2));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_2) + 320 * (v_cnt_rs - y_2));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -110,16 +110,16 @@ module mem_addr_gen(
                 else if(in_circle_3) begin
                     case(s_3)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_3) + 320 * (v_cnt_rs - y_3));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_3) + 320 * (v_cnt_rs - y_3));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_3) + 320 * (v_cnt_rs - y_3));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_3) + 320 * (v_cnt_rs - y_3));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -129,16 +129,16 @@ module mem_addr_gen(
                 else if(in_circle_4) begin
                     case(s_4)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_4) + 320 * (v_cnt_rs - y_4));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_4) + 320 * (v_cnt_rs - y_4));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_4) + 320 * (v_cnt_rs - y_4));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_4) + 320 * (v_cnt_rs - y_4));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -148,16 +148,16 @@ module mem_addr_gen(
                 else if(in_circle_5) begin
                     case(s_5)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_5) + 320 * (v_cnt_rs - y_5));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_5) + 320 * (v_cnt_rs - y_5));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_5) + 320 * (v_cnt_rs - y_5));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_5) + 320 * (v_cnt_rs - y_5));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -167,16 +167,16 @@ module mem_addr_gen(
                 else if(in_circle_6) begin
                     case(s_6)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_6) + 320 * (v_cnt_rs - y_6));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_6) + 320 * (v_cnt_rs - y_6));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_6) + 320 * (v_cnt_rs - y_6));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_6) + 320 * (v_cnt_rs - y_6));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -186,16 +186,16 @@ module mem_addr_gen(
                 else if(in_circle_7) begin
                     case(s_7)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_7) + 320 * (v_cnt_rs - y_7));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_7) + 320 * (v_cnt_rs - y_7));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_7) + 320 * (v_cnt_rs - y_7));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_7) + 320 * (v_cnt_rs - y_7));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -205,16 +205,16 @@ module mem_addr_gen(
                 else if(in_circle_8) begin
                     case(s_8)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_8) + 320 * (v_cnt_rs - y_8));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_8) + 320 * (v_cnt_rs - y_8));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_8) + 320 * (v_cnt_rs - y_8));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_8) + 320 * (v_cnt_rs - y_8));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -224,16 +224,16 @@ module mem_addr_gen(
                 else if(in_circle_9) begin
                     case(s_9)
                         `ball_size_1:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd65858 + ((h_cnt_rs - x_9) + 320 * (v_cnt_rs - y_9));
                         end
                         `ball_size_2:begin
                             pixel_addr = 17'd45466 + ((h_cnt_rs - x_9) + 320 * (v_cnt_rs - y_9));
                         end
                         `ball_size_3:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd64699 + ((h_cnt_rs - x_9) + 320 * (v_cnt_rs - y_9));
                         end
                         `ball_size_4:begin
-                            pixel_addr = 17'd20000;
+                            pixel_addr = 17'd43482 + ((h_cnt_rs - x_9) + 320 * (v_cnt_rs - y_9));
                         end
                         default: begin
                             pixel_addr = 17'd20000;
@@ -266,213 +266,6 @@ module mem_addr_gen(
             {vgaRed, vgaGreen, vgaBlue} = 12'h0;
         end
     end
-    // always @(*) begin
-    //     if(valid) begin
-    //         if(in_circle) begin
-    //             if(in_circle_0) begin
-    //                 case(s_0)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_1) begin
-    //                 case(s_1)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_2) begin
-    //                 case(s_2)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_3) begin
-    //                 case(s_3)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_4) begin
-    //                 case(s_4)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_5) begin
-    //                 case(s_5)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_6) begin
-    //                 case(s_6)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_7) begin
-    //                 case(s_7)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_8) begin
-    //                 case(s_8)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else if(in_circle_9) begin
-    //                 case(s_9)
-    //                     `ball_size_1:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0f4;
-    //                     end
-    //                     `ball_size_2:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h10f;
-    //                     end
-    //                     `ball_size_3:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'hf0e;
-    //                     end
-    //                     `ball_size_4:begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0df;
-    //                     end
-    //                     default: begin
-    //                         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //                     end
-    //                 endcase
-    //             end
-    //             else begin
-    //                 {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //             end
-                
-    //         end
-    //         else begin
-    //             {vgaRed, vgaGreen, vgaBlue} = pixel_back;
-    //         end
-            
-    //     end
-    //     else begin
-    //         {vgaRed, vgaGreen, vgaBlue} = 12'h0;
-    //     end
-    // end
 
 
     always @(*) begin

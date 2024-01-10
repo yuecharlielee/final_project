@@ -16,7 +16,7 @@
 
 //type of ball
 `define ball_size_0 0
-`define ball_size_1 10
+`define ball_size_1 11 //apple
 `define ball_size_2 15 //orange
-`define ball_size_3 24
-`define ball_size_4 30
+`define ball_size_3 26 //coconut
+`define ball_size_4 35 //watermelon
