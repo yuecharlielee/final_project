@@ -2,7 +2,7 @@
 //bound
 `define left_bound 92
 `define right_bound 238
-`define up_bound 70
+`define up_bound 60
 `define down_bound 240
 
 //pos

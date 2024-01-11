@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Thu Jan 11 19:38:15 2024
+| Date             : Thu Jan 11 22:29:42 2024
 | Host             : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.133        |
+| Total On-Chip Power (W)  | 0.135        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.060        |
+| Dynamic (W)              | 0.062        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.3         |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.016 |     3968 |       --- |             --- |
-|   LUT as Logic |     0.014 |     2426 |     20800 |           11.66 |
-|   CARRY4       |     0.002 |      543 |      8150 |            6.66 |
-|   Register     |    <0.001 |      536 |     41600 |            1.29 |
+| Slice Logic    |     0.016 |     4141 |       --- |             --- |
+|   LUT as Logic |     0.013 |     2566 |     20800 |           12.34 |
+|   CARRY4       |     0.002 |      583 |      8150 |            7.15 |
+|   Register     |    <0.001 |      538 |     41600 |            1.29 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |    <0.001 |       18 |     32600 |            0.06 |
 |   Others       |     0.000 |       81 |       --- |             --- |
-| Signals        |     0.017 |     4616 |       --- |             --- |
+| Signals        |     0.017 |     4777 |       --- |             --- |
 | Block RAM      |    <0.001 |     26.5 |        50 |           53.00 |
-| DSPs           |     0.018 |       52 |        90 |           57.78 |
-| I/O            |     0.007 |       28 |       106 |           26.42 |
+| DSPs           |     0.017 |       52 |        90 |           57.78 |
+| I/O            |     0.009 |       28 |       106 |           26.42 |
 | Static Power   |     0.073 |          |           |                 |
-| Total          |     0.133 |          |           |                 |
+| Total          |     0.135 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.063 |       0.053 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,18 +141,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| top                 |     0.060 |
-|   VC0               |     0.002 |
-|   key_de            |     0.002 |
-|     inst            |     0.001 |
-|       inst          |     0.001 |
-|   mem_addr_gen_inst |     0.027 |
-|   music             |     0.019 |
-|     toneGen         |     0.017 |
-|   pc                |     0.002 |
-+---------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| top                    |     0.062 |
+|   BMG0                 |     0.001 |
+|     U0                 |     0.001 |
+|       inst_blk_mem_gen |     0.001 |
+|   VC0                  |     0.002 |
+|   key_de               |     0.002 |
+|     inst               |     0.001 |
+|       inst             |     0.001 |
+|   mem_addr_gen_inst    |     0.025 |
+|   music                |     0.019 |
+|     toneGen            |     0.017 |
+|   pc                   |     0.002 |
++------------------------+-----------+
 
 

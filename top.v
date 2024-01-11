@@ -142,6 +142,7 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .x_9(x_pos[9]),
         .y_9(y_pos[9]),
         .s_9(state[9]),
+        .finish(finish),
         .vgaRed(vgaRed),
         .vgaGreen(vgaGreen),
         .vgaBlue(vgaBlue)

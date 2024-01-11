@@ -26,8 +26,11 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
 
     reg [11:0] ball_size, next_ball_size;
 
-    output wire finish;
-    assign finish = (counter == 10'd10) ? 1 : 0;
+    output reg finish;
+
+    reg is_overflow;
+
+    
     //parameter falling_State = 4'd0, select_State = 4'd1;
 
     always @(posedge clk) begin
@@ -474,11 +477,11 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
 
             end
             10'd2:begin
-                next_ball_size = `ball_size_4;
+                next_ball_size = `ball_size_1;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
-                next_s_2 = `ball_size_4;
+                next_s_2 = `ball_size_1;
                 next_s_3 = s_3;
                 next_s_4 = s_4;
                 next_s_5 = s_5;
@@ -488,12 +491,12 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd3:begin
-                next_ball_size = `ball_size_1;
+                next_ball_size = `ball_size_4;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
-                next_s_3 = `ball_size_1;
+                next_s_3 = `ball_size_4;
                 next_s_4 = s_4;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
@@ -502,13 +505,13 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd4:begin
-                next_ball_size = `ball_size_4;
+                next_ball_size = `ball_size_2;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
                 next_s_3 = s_3;
-                next_s_4 = `ball_size_4;
+                next_s_4 = `ball_size_2;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
                 next_s_7 = s_7;
@@ -544,20 +547,6 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd7:begin
-                next_ball_size = `ball_size_2;
-
-                next_s_0 = s_0;
-                next_s_1 = s_1;
-                next_s_2 = s_2;
-                next_s_3 = s_3;
-                next_s_4 = s_4;
-                next_s_5 = s_5;
-                next_s_6 = s_6;
-                next_s_7 = `ball_size_2;
-                next_s_8 = s_8;
-                next_s_9 = s_9;
-            end
-            10'd8:begin
                 next_ball_size = `ball_size_3;
 
                 next_s_0 = s_0;
@@ -567,12 +556,26 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_4 = s_4;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
+                next_s_7 = `ball_size_3;
+                next_s_8 = s_8;
+                next_s_9 = s_9;
+            end
+            10'd8:begin
+                next_ball_size = `ball_size_1;
+
+                next_s_0 = s_0;
+                next_s_1 = s_1;
+                next_s_2 = s_2;
+                next_s_3 = s_3;
+                next_s_4 = s_4;
+                next_s_5 = s_5;
+                next_s_6 = s_6;
                 next_s_7 = s_7;
-                next_s_8 = `ball_size_3;
+                next_s_8 = `ball_size_1;    
                 next_s_9 = s_9;
             end
             10'd9:begin
-                next_ball_size = `ball_size_2;
+                next_ball_size = `ball_size_1;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
@@ -583,7 +586,7 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_6 = s_6;
                 next_s_7 = s_7;
                 next_s_8 = s_8;
-                next_s_9 = `ball_size_2;
+                next_s_9 = `ball_size_1;
             end
             default:begin
                 next_ball_size = `ball_size_0;
@@ -600,5 +603,109 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
         endcase
+    end
+
+
+    always @(*)begin
+        case(counter)
+            10'd0:begin
+                is_overflow = 1'b0;
+            end
+            10'd1:begin
+                if((y_0 - s_0) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd2:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd3:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd4:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd5:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd6:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound || (y_5 - s_5) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd7:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound || (y_5 - s_5) < `up_bound || (y_6 - s_6) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd8:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound || (y_5 - s_5) < `up_bound || (y_6 - s_6) < `up_bound || (y_7 - s_7) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd9:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound || (y_5 - s_5) < `up_bound || (y_6 - s_6) < `up_bound || (y_7 - s_7) < `up_bound || (y_8 - s_8) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            10'd10:begin
+                if((y_0 - s_0) < `up_bound || (y_1 - s_1) < `up_bound || (y_2 - s_2) < `up_bound || (y_3 - s_3) < `up_bound || (y_4 - s_4) < `up_bound || (y_5 - s_5) < `up_bound || (y_6 - s_6) < `up_bound || (y_7 - s_7) < `up_bound || (y_8 - s_8) < `up_bound || (y_9 - s_9) < `up_bound) begin
+                    is_overflow = 1'b1;
+                end
+                else begin
+                    is_overflow = 1'b0;
+                end
+            end
+            default:begin
+                is_overflow = 1'b0;
+            end
+        endcase
+
+        if(counter >= 10'd10) begin
+            if(!is_overflow) begin
+                finish = 1'b1;
+            end
+            else begin
+                finish = 1'b0;
+            end
+        end
+        else begin
+            finish = 1'b0;
+        end
     end
 endmodule

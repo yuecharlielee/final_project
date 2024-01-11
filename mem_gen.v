@@ -1,7 +1,7 @@
 `include "global.v"
 
 module mem_addr_gen(
-    h_cnt, v_cnt, valid,
+    h_cnt, v_cnt, valid,finish,
     x_0, x_1, x_2, x_3, x_4, x_5, x_6, x_7, x_8, x_9, 
     y_0, y_1, y_2, y_3, y_4, y_5, y_6, y_7, y_8, y_9, 
     s_0, s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9,
@@ -19,6 +19,7 @@ module mem_addr_gen(
 
     input [11:0] pixel_back;
 
+    input finish;
 
     output reg [16:0] pixel_addr;
     output reg [3:0] vgaRed, vgaGreen, vgaBlue;
@@ -246,15 +247,22 @@ module mem_addr_gen(
                 
             end
             else begin
-                pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
+                if(finish) begin
+                    pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
+                end
+                else begin
+                    if(v_cnt_rs < 16'd40) begin
+                        pixel_addr = 17'd28;
+                    end
+                    else begin
+                        pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
+                    end
+                end
             end
         end
         else begin
             pixel_addr = ((h_cnt_rs)+320*(v_cnt_rs))% 76800;
         end
-        
-        
-        
     end
     
 
