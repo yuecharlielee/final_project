@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Jan 11 19:28:58 2024
+| Date         : Thu Jan 11 19:37:43 2024
 | Host         : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -59,11 +59,11 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              39 |           15 |
-| No           | No                    | Yes                    |             139 |           41 |
-| No           | Yes                   | No                     |              21 |           10 |
+| No           | No                    | Yes                    |             139 |           43 |
+| No           | Yes                   | No                     |              21 |           13 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |              43 |           11 |
-| Yes          | Yes                   | No                     |             294 |          118 |
+| Yes          | Yes                   | No                     |             294 |          127 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,31 +75,31 @@ Table of Contents
 +----------------------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 |  CD0/Q_BUFG[0]             |                                                   | rst_IBUF                 |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG             | key_de/inst/inst/lock_status0                     | rst_IBUF                 |                1 |              2 |         2.00 |
-|  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                 |                1 |              4 |         4.00 |
-|  music/btSpeedGen/beatFreq |                                                   | rst_IBUF                 |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                 |                2 |              4 |         2.00 |
+|  music/btSpeedGen/beatFreq |                                                   | rst_IBUF                 |                3 |              7 |         2.33 |
 |  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                 |                2 |              8 |         4.00 |
-|  clk_d22_BUFG              |                                                   | rst_IBUF                 |                4 |              8 |         2.00 |
-|  CD0/Q_BUFG[0]             |                                                   |                          |                6 |             10 |         1.67 |
-|  CD0/Q_BUFG[0]             | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                2 |             10 |         5.00 |
-|  clk_IBUF_BUFG             | key_de/next_key                                   | rst_IBUF                 |                3 |             10 |         3.33 |
-|  clk_d22_BUFG              | pc/next_counter                                   | rst_IBUF                 |                4 |             10 |         2.50 |
-|  CD0/Q_BUFG[0]             |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                 |                2 |              8 |         4.00 |
+|  clk_d22_BUFG              |                                                   | rst_IBUF                 |                6 |              8 |         1.33 |
+|  CD0/Q_BUFG[0]             |                                                   |                          |                5 |             10 |         2.00 |
+|  CD0/Q_BUFG[0]             | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG             | key_de/next_key                                   | rst_IBUF                 |                2 |             10 |         5.00 |
+|  clk_d22_BUFG              | pc/next_counter                                   | rst_IBUF                 |                3 |             10 |         3.33 |
+|  CD0/Q_BUFG[0]             |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                5 |             11 |         2.20 |
 |  clk_IBUF_BUFG             | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                 |                2 |             11 |         5.50 |
-|  clk_d22_BUFG              | pc/next_x_pos                                     | rst_IBUF                 |                2 |             12 |         6.00 |
+|  clk_d22_BUFG              | pc/next_x_pos                                     | rst_IBUF                 |                3 |             12 |         4.00 |
 |  clk_d22_BUFG              | pc/next_y_pos                                     | rst_IBUF                 |                3 |             12 |         4.00 |
-|  clk_d22_BUFG              | pc/counter_reg[0]_2[0]                            | rst_IBUF                 |               12 |             25 |         2.08 |
-|  clk_d22_BUFG              | pc/counter_reg[1]_2[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG              | pc/counter_reg[0]_1[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG              | pc/counter_reg[1]_1[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG              | pc/counter_reg[2]_0[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG              | pc/counter_reg[1]_3[0]                            | rst_IBUF                 |               10 |             25 |         2.50 |
-|  clk_d22_BUFG              | pc/counter_reg[0]_0[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG              | pc/E[0]                                           | rst_IBUF                 |               12 |             25 |         2.08 |
-|  clk_d22_BUFG              | pc/counter_reg[1]_0[0]                            | rst_IBUF                 |                9 |             25 |         2.78 |
+|  clk_d22_BUFG              | pc/E[0]                                           | rst_IBUF                 |               15 |             25 |         1.67 |
+|  clk_d22_BUFG              | pc/counter_reg[1]_1[0]                            | rst_IBUF                 |               10 |             25 |         2.50 |
+|  clk_d22_BUFG              | pc/counter_reg[1]_2[0]                            | rst_IBUF                 |               10 |             25 |         2.50 |
+|  clk_d22_BUFG              | pc/counter_reg[3]_0[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
+|  clk_d22_BUFG              | pc/counter_reg[3]_1[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
+|  clk_d22_BUFG              | pc/counter_reg[1]_0[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
+|  clk_d22_BUFG              | pc/counter_reg[2]_0[0]                            | rst_IBUF                 |               13 |             25 |         1.92 |
 |  clk_d22_BUFG              | pc/counter_reg[2]_1[0]                            | rst_IBUF                 |                9 |             25 |         2.78 |
-|  clk_IBUF_BUFG             |                                                   |                          |                9 |             29 |         3.22 |
-|  clk_IBUF_BUFG             |                                                   | rst_IBUF                 |               39 |            132 |         3.38 |
+|  clk_d22_BUFG              | pc/counter_reg[3]_2[0]                            | rst_IBUF                 |               12 |             25 |         2.08 |
+|  clk_d22_BUFG              | pc/counter_reg[3]_3[0]                            | rst_IBUF                 |               11 |             25 |         2.27 |
+|  clk_IBUF_BUFG             |                                                   |                          |               10 |             29 |         2.90 |
+|  clk_IBUF_BUFG             |                                                   | rst_IBUF                 |               40 |            132 |         3.30 |
 +----------------------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 
 

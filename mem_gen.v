@@ -33,16 +33,16 @@ module mem_addr_gen(
 
     reg [19:0] area_s_0, area_s_1, area_s_2, area_s_3, area_s_4, area_s_5, area_s_6, area_s_7, area_s_8, area_s_9;  
 
-    wire in_circle_0 = ((h_cnt_rs - x_0) * (h_cnt_rs - x_0) + (v_cnt_rs - y_0) * (v_cnt_rs - y_0) < area_s_0) && s_0 != 0;
-    wire in_circle_1 = ((h_cnt_rs - x_1) * (h_cnt_rs - x_1) + (v_cnt_rs - y_1) * (v_cnt_rs - y_1) < area_s_1) && s_1 != 0;
-    wire in_circle_2 = ((h_cnt_rs - x_2) * (h_cnt_rs - x_2) + (v_cnt_rs - y_2) * (v_cnt_rs - y_2) < area_s_2) && s_2 != 0;
-    wire in_circle_3 = ((h_cnt_rs - x_3) * (h_cnt_rs - x_3) + (v_cnt_rs - y_3) * (v_cnt_rs - y_3) < area_s_3) && s_3 != 0;
-    wire in_circle_4 = ((h_cnt_rs - x_4) * (h_cnt_rs - x_4) + (v_cnt_rs - y_4) * (v_cnt_rs - y_4) < area_s_4) && s_4 != 0;
-    wire in_circle_5 = ((h_cnt_rs - x_5) * (h_cnt_rs - x_5) + (v_cnt_rs - y_5) * (v_cnt_rs - y_5) < area_s_5) && s_5 != 0;
-    wire in_circle_6 = ((h_cnt_rs - x_6) * (h_cnt_rs - x_6) + (v_cnt_rs - y_6) * (v_cnt_rs - y_6) < area_s_6) && s_6 != 0;
-    wire in_circle_7 = ((h_cnt_rs - x_7) * (h_cnt_rs - x_7) + (v_cnt_rs - y_7) * (v_cnt_rs - y_7) < area_s_7) && s_7 != 0;
-    wire in_circle_8 = ((h_cnt_rs - x_8) * (h_cnt_rs - x_8) + (v_cnt_rs - y_8) * (v_cnt_rs - y_8) < area_s_8) && s_8 != 0; 
-    wire in_circle_9 = ((h_cnt_rs - x_9) * (h_cnt_rs - x_9) + (v_cnt_rs - y_9) * (v_cnt_rs - y_9) < area_s_9) && s_9 != 0;
+    wire in_circle_0 = s_0 != 0 && ((h_cnt_rs - x_0) * (h_cnt_rs - x_0) + (v_cnt_rs - y_0) * (v_cnt_rs - y_0) < area_s_0);
+    wire in_circle_1 = s_1 != 0 && ((h_cnt_rs - x_1) * (h_cnt_rs - x_1) + (v_cnt_rs - y_1) * (v_cnt_rs - y_1) < area_s_1);
+    wire in_circle_2 = s_2 != 0 && ((h_cnt_rs - x_2) * (h_cnt_rs - x_2) + (v_cnt_rs - y_2) * (v_cnt_rs - y_2) < area_s_2);
+    wire in_circle_3 = s_3 != 0 && ((h_cnt_rs - x_3) * (h_cnt_rs - x_3) + (v_cnt_rs - y_3) * (v_cnt_rs - y_3) < area_s_3);
+    wire in_circle_4 = s_4 != 0 && ((h_cnt_rs - x_4) * (h_cnt_rs - x_4) + (v_cnt_rs - y_4) * (v_cnt_rs - y_4) < area_s_4);
+    wire in_circle_5 = s_5 != 0 && ((h_cnt_rs - x_5) * (h_cnt_rs - x_5) + (v_cnt_rs - y_5) * (v_cnt_rs - y_5) < area_s_5);
+    wire in_circle_6 = s_6 != 0 && ((h_cnt_rs - x_6) * (h_cnt_rs - x_6) + (v_cnt_rs - y_6) * (v_cnt_rs - y_6) < area_s_6);
+    wire in_circle_7 = s_7 != 0 && ((h_cnt_rs - x_7) * (h_cnt_rs - x_7) + (v_cnt_rs - y_7) * (v_cnt_rs - y_7) < area_s_7);
+    wire in_circle_8 = s_8 != 0 && ((h_cnt_rs - x_8) * (h_cnt_rs - x_8) + (v_cnt_rs - y_8) * (v_cnt_rs - y_8) < area_s_8); 
+    wire in_circle_9 = s_9 != 0 && ((h_cnt_rs - x_9) * (h_cnt_rs - x_9) + (v_cnt_rs - y_9) * (v_cnt_rs - y_9) < area_s_9);
 
 
     wire in_circle = in_circle_0 || in_circle_1 || in_circle_2 || in_circle_3 || in_circle_4 || in_circle_5 || in_circle_6 || in_circle_7 || in_circle_8 || in_circle_9; 

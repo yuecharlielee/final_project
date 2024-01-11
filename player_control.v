@@ -502,13 +502,13 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd4:begin
-                next_ball_size = `ball_size_2;
+                next_ball_size = `ball_size_4;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
                 next_s_3 = s_3;
-                next_s_4 = `ball_size_2;
+                next_s_4 = `ball_size_4;
                 next_s_5 = s_5;
                 next_s_6 = s_6;
                 next_s_7 = s_7;
@@ -516,14 +516,14 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 next_s_9 = s_9;
             end
             10'd5:begin
-                next_ball_size = `ball_size_2;
+                next_ball_size = `ball_size_3;
 
                 next_s_0 = s_0;
                 next_s_1 = s_1;
                 next_s_2 = s_2;
                 next_s_3 = s_3;
                 next_s_4 = s_4;
-                next_s_5 = `ball_size_2;
+                next_s_5 = `ball_size_3;
                 next_s_6 = s_6;
                 next_s_7 = s_7;
                 next_s_8 = s_8;
