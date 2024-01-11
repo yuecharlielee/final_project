@@ -68,14 +68,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports {finish}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[10]}]
 #set_property PACKAGE_PIN U3 [get_ports {led[11]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {led[11]}]
-#set_property PACKAGE_PIN P3 [get_ports {led[12]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[12]}]
-#set_property PACKAGE_PIN N3 [get_ports {led[13]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[13]}]
-#set_property PACKAGE_PIN P1 [get_ports {led[14]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[14]}]
-#set_property PACKAGE_PIN L1 [get_ports {led[15]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]
+# set_property PACKAGE_PIN P3 [get_ports {left}]
+# set_property IOSTANDARD LVCMOS33 [get_ports {left}]
+set_property PACKAGE_PIN N3 [get_ports {left_signal}]
+set_property IOSTANDARD LVCMOS33 [get_ports {left_signal}]
+set_property PACKAGE_PIN P1 [get_ports {right_signal}]
+set_property IOSTANDARD LVCMOS33 [get_ports {right_signal}]
+set_property PACKAGE_PIN L1 [get_ports {falling_signal}]
+set_property IOSTANDARD LVCMOS33 [get_ports {falling_signal}]
 
 
 ##7 segment display
@@ -151,17 +151,17 @@ set_property IOSTANDARD LVCMOS33 [get_ports rst]
 
 ##Pmod Header JB
 ##Sch name = JB1
-#set_property PACKAGE_PIN A14 [get_ports {JB[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[0]}]
-##Sch name = JB2
-#set_property PACKAGE_PIN A16 [get_ports {JB[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[1]}]
+set_property PACKAGE_PIN A14 [get_ports {pmod_1}]
+set_property IOSTANDARD LVCMOS33 [get_ports {pmod_1}]
+#Sch name = JB2
+set_property PACKAGE_PIN A16 [get_ports {pmod_2}]
+set_property IOSTANDARD LVCMOS33 [get_ports {pmod_2}]
 ##Sch name = JB3
 #set_property PACKAGE_PIN B15 [get_ports {JB[2]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JB[2]}]
-##Sch name = JB4
-#set_property PACKAGE_PIN B16 [get_ports {JB[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
+#Sch name = JB4
+set_property PACKAGE_PIN B16 [get_ports {pmod_4}]
+set_property IOSTANDARD LVCMOS33 [get_ports {pmod_4}]
 ##Sch name = JB7
 #set_property PACKAGE_PIN A15 [get_ports {JB[4]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JB[4]}]

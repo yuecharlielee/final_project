@@ -1,11 +1,14 @@
 `include "global.v"
 
-module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync, btnC, btnL, btnR, finish);
+module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync, btnC, btnL, btnR, finish, left_signal, right_signal, falling_signal, pmod_1, pmod_2, pmod_4);
     input clk, rst, btnC, btnL, btnR;
     inout PS2_DATA, PS2_CLK;
     output wire [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;
     output wire finish;
+    output wire left_signal, right_signal, falling_signal;
+
+    output pmod_1, pmod_2, pmod_4;
 
     wire clk_d2, clk_d22, clk_d16;
 
@@ -15,7 +18,6 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
 
     wire valid;
 
-    wire next_falling, next_left, next_right;
 
     wire [11:0] x_pos[11:0];
     wire [11:0] y_pos[11:0];
@@ -29,23 +31,27 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     wire [9:0] v_cnt;  //480
 
     
+    wire left, right, falling;
+
+    assign left_signal = (left == 1'b1 || btnL == 1'b1) ? 1'b1 : 1'b0;
+    assign right_signal = (right == 1'b1 || btnR == 1'b1) ? 1'b1 : 1'b0;
+    assign falling_signal = (falling == 1'b1 || btnC == 1'b1) ? 1'b1 : 1'b0;
 
     //clk
     clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
     clk_div #(20) CD1(.clk(clk), .clk_d(clk_d16));
     clk_div #(22) CD2(.clk(clk), .clk_d(clk_d22));
     
-    assign next_left = btnL;
     
     Keyboard_control key_ctrl(
-         .clk(clk_d22),
+         .clk(clk),
          .rst(rst),
          .key_down(key_down), 
          .last_change(last_change), 
          .been_ready(been_ready), 
-         .falling(next_falling), 
-         .left(), 
-         .right(next_right)
+         .falling(falling), 
+         .left(left), 
+         .right(right)
     );
 
     KeyboardDecoder key_de (
@@ -61,9 +67,9 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
     player_control pc(
         .clk(clk_d22),
         .rst(rst),
-        .falling(next_falling),
-        .left(next_left),
-        .right(next_right),
+        .falling(falling),
+        .left(left),
+        .right(right),
         .test_falling(btnC),
         .test_left(btnL),
         .test_right(btnR),
@@ -159,4 +165,12 @@ module top(clk, rst, PS2_DATA, PS2_CLK, vgaRed, vgaBlue, vgaGreen, hsync, vsync,
         .h_cnt(h_cnt),
         .v_cnt(v_cnt)
     );
+
+    MusicMain music (
+              .clk(clk),
+              .reset(rst),
+              .pmod_1(pmod_1),
+              .pmod_2(pmod_2),
+              .pmod_4(pmod_4)
+          );
 endmodule

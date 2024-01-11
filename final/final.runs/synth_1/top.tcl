@@ -96,8 +96,12 @@ read_verilog -library xil_defaultlib {
   D:/hardware_design/final_test/final_project/Keyboard_control.v
   D:/hardware_design/final_test/final_project/clock_divisor.v
   D:/hardware_design/final_test/final_project/mem_gen.v
+  D:/hardware_design/final_test/final_project/music.v
+  D:/hardware_design/final_test/final_project/musicmain.v
   D:/hardware_design/final_test/final_project/onepulse.v
   D:/hardware_design/final_test/final_project/player_control.v
+  D:/hardware_design/final_test/final_project/playerctrl.v
+  D:/hardware_design/final_test/final_project/pwm.v
   D:/hardware_design/final_test/final_project/vga.v
   D:/hardware_design/final_test/final_project/top.v
 }
