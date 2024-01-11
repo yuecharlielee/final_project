@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Jan 11 16:05:03 2024">
+<application name="pa" timeStamp="Thu Jan 11 19:27:07 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f34df16214b2493c93a2407a8d8f4a3f" type="ProjectID"/>
-<property name="ProjectIteration" value="334" type="ProjectIteration"/>
+<property name="ProjectIteration" value="343" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -25,14 +25,14 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditDelete" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="2" type="JavaHandler"/>
 <property name="ExitApp" value="2" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="295" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="304" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="23" type="JavaHandler"/>
 <property name="OpenProject" value="7" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="1" type="JavaHandler"/>
 <property name="RecustomizeCore" value="22" type="JavaHandler"/>
 <property name="RefreshDevice" value="2" type="JavaHandler"/>
-<property name="RunBitgen" value="345" type="JavaHandler"/>
+<property name="RunBitgen" value="354" type="JavaHandler"/>
 <property name="ShowView" value="34" type="JavaHandler"/>
 <property name="ToolsSettings" value="7" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="1" type="JavaHandler"/>
@@ -40,7 +40,7 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Gui Handlers">
 <property name="AddRepositoryInfoDialog_OK" value="1" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="177" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="186" type="GuiHandlerData"/>
 <property name="BaseDialog_NO" value="5" type="GuiHandlerData"/>
 <property name="BaseDialog_OK" value="169" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="308" type="GuiHandlerData"/>
@@ -55,7 +55,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="FPGAChooser_SPEED" value="1" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="206" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="1" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="442" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="452" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_OPEN_PROJECT" value="7" type="GuiHandlerData"/>
 <property name="HACGCCoeFileWidget_BROWSE" value="25" type="GuiHandlerData"/>
@@ -86,9 +86,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PAViews_IP_CATALOG" value="1" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="21" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_OPEN_TARGET" value="7" type="GuiHandlerData"/>
-<property name="ProgramDebugTab_PROGRAM_DEVICE" value="298" type="GuiHandlerData"/>
+<property name="ProgramDebugTab_PROGRAM_DEVICE" value="307" type="GuiHandlerData"/>
 <property name="ProgramDebugTab_REFRESH_DEVICE" value="4" type="GuiHandlerData"/>
-<property name="ProgramFpgaDialog_PROGRAM" value="295" type="GuiHandlerData"/>
+<property name="ProgramFpgaDialog_PROGRAM" value="305" type="GuiHandlerData"/>
 <property name="ProgressDialog_CANCEL" value="2" type="GuiHandlerData"/>
 <property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="1" type="GuiHandlerData"/>
 <property name="ProjectNameChooser_PROJECT_NAME" value="1" type="GuiHandlerData"/>

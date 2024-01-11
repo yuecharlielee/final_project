@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Jan 11 16:07:38 2024
+| Date         : Thu Jan 11 19:29:27 2024
 | Host         : DESKTOP-IIDP9S7 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 374
+             Violations found: 376
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 369        |
-| TIMING-18 | Warning          | Missing input or output delay | 5          |
+| TIMING-18 | Warning          | Missing input or output delay | 7          |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -1900,7 +1900,17 @@ Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
+An output delay is missing on left_signal relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
 An output delay is missing on pmod_1 relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on right_signal relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 
