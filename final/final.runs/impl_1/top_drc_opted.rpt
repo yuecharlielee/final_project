@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Jan 12 08:04:12 2024
+| Date         : Fri Jan 12 08:21:07 2024
 | Host         : lap180903 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 | Design       : top
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 328
+             Violations found: 326
 +--------+----------+------------------------+------------+
 | Rule   | Severity | Description            | Violations |
 +--------+----------+------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining       | 164        |
+| DPIP-1 | Warning  | Input pipelining       | 162        |
 | DPOP-1 | Warning  | PREG Output pipelining | 82         |
 | DPOP-2 | Warning  | MREG Output pipelining | 82         |
 +--------+----------+------------------------+------------+
@@ -237,620 +237,610 @@ Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP pc/collision20 input pc/collision20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/collision4 input pc/collision4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP pc/collision20 input pc/collision20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/collision4__0 input pc/collision4__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP pc/collision20__0 input pc/collision20__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out input pc/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP pc/collision20__0 input pc/collision20__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out input pc/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP pc/p_1_out input pc/p_1_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__0 input pc/p_1_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP pc/p_1_out input pc/p_1_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__0 input pc/p_1_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
 Input pipelining  
-DSP pc/p_1_out__0 input pc/p_1_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__1 input pc/p_1_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#48 Warning
 Input pipelining  
-DSP pc/p_1_out__0 input pc/p_1_out__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__1 input pc/p_1_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#49 Warning
 Input pipelining  
-DSP pc/p_1_out__1 input pc/p_1_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__10 input pc/p_1_out__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#50 Warning
 Input pipelining  
-DSP pc/p_1_out__1 input pc/p_1_out__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__10 input pc/p_1_out__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#51 Warning
 Input pipelining  
-DSP pc/p_1_out__10 input pc/p_1_out__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__11 input pc/p_1_out__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#52 Warning
 Input pipelining  
-DSP pc/p_1_out__10 input pc/p_1_out__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__11 input pc/p_1_out__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#53 Warning
 Input pipelining  
-DSP pc/p_1_out__11 input pc/p_1_out__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__12 input pc/p_1_out__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#54 Warning
 Input pipelining  
-DSP pc/p_1_out__11 input pc/p_1_out__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__12 input pc/p_1_out__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#55 Warning
 Input pipelining  
-DSP pc/p_1_out__12 input pc/p_1_out__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__13 input pc/p_1_out__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#56 Warning
 Input pipelining  
-DSP pc/p_1_out__12 input pc/p_1_out__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__13 input pc/p_1_out__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#57 Warning
 Input pipelining  
-DSP pc/p_1_out__13 input pc/p_1_out__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__14 input pc/p_1_out__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#58 Warning
 Input pipelining  
-DSP pc/p_1_out__13 input pc/p_1_out__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__14 input pc/p_1_out__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#59 Warning
 Input pipelining  
-DSP pc/p_1_out__14 input pc/p_1_out__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__15 input pc/p_1_out__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#60 Warning
 Input pipelining  
-DSP pc/p_1_out__14 input pc/p_1_out__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__15 input pc/p_1_out__15/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#61 Warning
 Input pipelining  
-DSP pc/p_1_out__15 input pc/p_1_out__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__16 input pc/p_1_out__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#62 Warning
 Input pipelining  
-DSP pc/p_1_out__15 input pc/p_1_out__15/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__16 input pc/p_1_out__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#63 Warning
 Input pipelining  
-DSP pc/p_1_out__16 input pc/p_1_out__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__17 input pc/p_1_out__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#64 Warning
 Input pipelining  
-DSP pc/p_1_out__16 input pc/p_1_out__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__17 input pc/p_1_out__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#65 Warning
 Input pipelining  
-DSP pc/p_1_out__17 input pc/p_1_out__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__18 input pc/p_1_out__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#66 Warning
 Input pipelining  
-DSP pc/p_1_out__17 input pc/p_1_out__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__18 input pc/p_1_out__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#67 Warning
 Input pipelining  
-DSP pc/p_1_out__18 input pc/p_1_out__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__19 input pc/p_1_out__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#68 Warning
 Input pipelining  
-DSP pc/p_1_out__18 input pc/p_1_out__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__19 input pc/p_1_out__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#69 Warning
 Input pipelining  
-DSP pc/p_1_out__19 input pc/p_1_out__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__2 input pc/p_1_out__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#70 Warning
 Input pipelining  
-DSP pc/p_1_out__19 input pc/p_1_out__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__2 input pc/p_1_out__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#71 Warning
 Input pipelining  
-DSP pc/p_1_out__2 input pc/p_1_out__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__20 input pc/p_1_out__20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#72 Warning
 Input pipelining  
-DSP pc/p_1_out__2 input pc/p_1_out__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__20 input pc/p_1_out__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#73 Warning
 Input pipelining  
-DSP pc/p_1_out__20 input pc/p_1_out__20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__21 input pc/p_1_out__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#74 Warning
 Input pipelining  
-DSP pc/p_1_out__20 input pc/p_1_out__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__21 input pc/p_1_out__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#75 Warning
 Input pipelining  
-DSP pc/p_1_out__21 input pc/p_1_out__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__22 input pc/p_1_out__22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#76 Warning
 Input pipelining  
-DSP pc/p_1_out__21 input pc/p_1_out__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__22 input pc/p_1_out__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#77 Warning
 Input pipelining  
-DSP pc/p_1_out__22 input pc/p_1_out__22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__23 input pc/p_1_out__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#78 Warning
 Input pipelining  
-DSP pc/p_1_out__22 input pc/p_1_out__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__23 input pc/p_1_out__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#79 Warning
 Input pipelining  
-DSP pc/p_1_out__23 input pc/p_1_out__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__24 input pc/p_1_out__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#80 Warning
 Input pipelining  
-DSP pc/p_1_out__23 input pc/p_1_out__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__24 input pc/p_1_out__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#81 Warning
 Input pipelining  
-DSP pc/p_1_out__24 input pc/p_1_out__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__25 input pc/p_1_out__25/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#82 Warning
 Input pipelining  
-DSP pc/p_1_out__24 input pc/p_1_out__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__25 input pc/p_1_out__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#83 Warning
 Input pipelining  
-DSP pc/p_1_out__25 input pc/p_1_out__25/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__26 input pc/p_1_out__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#84 Warning
 Input pipelining  
-DSP pc/p_1_out__25 input pc/p_1_out__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__26 input pc/p_1_out__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#85 Warning
 Input pipelining  
-DSP pc/p_1_out__26 input pc/p_1_out__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__27 input pc/p_1_out__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#86 Warning
 Input pipelining  
-DSP pc/p_1_out__26 input pc/p_1_out__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__27 input pc/p_1_out__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#87 Warning
 Input pipelining  
-DSP pc/p_1_out__27 input pc/p_1_out__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__28 input pc/p_1_out__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#88 Warning
 Input pipelining  
-DSP pc/p_1_out__27 input pc/p_1_out__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__28 input pc/p_1_out__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#89 Warning
 Input pipelining  
-DSP pc/p_1_out__28 input pc/p_1_out__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__29 input pc/p_1_out__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#90 Warning
 Input pipelining  
-DSP pc/p_1_out__28 input pc/p_1_out__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__29 input pc/p_1_out__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#91 Warning
 Input pipelining  
-DSP pc/p_1_out__29 input pc/p_1_out__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__3 input pc/p_1_out__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#92 Warning
 Input pipelining  
-DSP pc/p_1_out__29 input pc/p_1_out__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__3 input pc/p_1_out__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#93 Warning
 Input pipelining  
-DSP pc/p_1_out__3 input pc/p_1_out__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__30 input pc/p_1_out__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#94 Warning
 Input pipelining  
-DSP pc/p_1_out__3 input pc/p_1_out__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__30 input pc/p_1_out__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#95 Warning
 Input pipelining  
-DSP pc/p_1_out__30 input pc/p_1_out__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__31 input pc/p_1_out__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#96 Warning
 Input pipelining  
-DSP pc/p_1_out__30 input pc/p_1_out__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__31 input pc/p_1_out__31/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#97 Warning
 Input pipelining  
-DSP pc/p_1_out__31 input pc/p_1_out__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__32 input pc/p_1_out__32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#98 Warning
 Input pipelining  
-DSP pc/p_1_out__31 input pc/p_1_out__31/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__32 input pc/p_1_out__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#99 Warning
 Input pipelining  
-DSP pc/p_1_out__32 input pc/p_1_out__32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__33 input pc/p_1_out__33/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#100 Warning
 Input pipelining  
-DSP pc/p_1_out__32 input pc/p_1_out__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__33 input pc/p_1_out__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#101 Warning
 Input pipelining  
-DSP pc/p_1_out__33 input pc/p_1_out__33/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__34 input pc/p_1_out__34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#102 Warning
 Input pipelining  
-DSP pc/p_1_out__33 input pc/p_1_out__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__34 input pc/p_1_out__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#103 Warning
 Input pipelining  
-DSP pc/p_1_out__34 input pc/p_1_out__34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__35 input pc/p_1_out__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#104 Warning
 Input pipelining  
-DSP pc/p_1_out__34 input pc/p_1_out__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__35 input pc/p_1_out__35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#105 Warning
 Input pipelining  
-DSP pc/p_1_out__35 input pc/p_1_out__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__36 input pc/p_1_out__36/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#106 Warning
 Input pipelining  
-DSP pc/p_1_out__35 input pc/p_1_out__35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__36 input pc/p_1_out__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#107 Warning
 Input pipelining  
-DSP pc/p_1_out__36 input pc/p_1_out__36/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__37 input pc/p_1_out__37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#108 Warning
 Input pipelining  
-DSP pc/p_1_out__36 input pc/p_1_out__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__37 input pc/p_1_out__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#109 Warning
 Input pipelining  
-DSP pc/p_1_out__37 input pc/p_1_out__37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__38 input pc/p_1_out__38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#110 Warning
 Input pipelining  
-DSP pc/p_1_out__37 input pc/p_1_out__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__38 input pc/p_1_out__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#111 Warning
 Input pipelining  
-DSP pc/p_1_out__38 input pc/p_1_out__38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__39 input pc/p_1_out__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#112 Warning
 Input pipelining  
-DSP pc/p_1_out__38 input pc/p_1_out__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__39 input pc/p_1_out__39/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#113 Warning
 Input pipelining  
-DSP pc/p_1_out__39 input pc/p_1_out__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__4 input pc/p_1_out__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#114 Warning
 Input pipelining  
-DSP pc/p_1_out__39 input pc/p_1_out__39/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__4 input pc/p_1_out__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#115 Warning
 Input pipelining  
-DSP pc/p_1_out__4 input pc/p_1_out__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__40 input pc/p_1_out__40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#116 Warning
 Input pipelining  
-DSP pc/p_1_out__4 input pc/p_1_out__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__40 input pc/p_1_out__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#117 Warning
 Input pipelining  
-DSP pc/p_1_out__40 input pc/p_1_out__40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__41 input pc/p_1_out__41/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#118 Warning
 Input pipelining  
-DSP pc/p_1_out__40 input pc/p_1_out__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__41 input pc/p_1_out__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#119 Warning
 Input pipelining  
-DSP pc/p_1_out__41 input pc/p_1_out__41/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__42 input pc/p_1_out__42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#120 Warning
 Input pipelining  
-DSP pc/p_1_out__41 input pc/p_1_out__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__42 input pc/p_1_out__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#121 Warning
 Input pipelining  
-DSP pc/p_1_out__42 input pc/p_1_out__42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__43 input pc/p_1_out__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#122 Warning
 Input pipelining  
-DSP pc/p_1_out__42 input pc/p_1_out__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__43 input pc/p_1_out__43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#123 Warning
 Input pipelining  
-DSP pc/p_1_out__43 input pc/p_1_out__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__44 input pc/p_1_out__44/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#124 Warning
 Input pipelining  
-DSP pc/p_1_out__43 input pc/p_1_out__43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__44 input pc/p_1_out__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#125 Warning
 Input pipelining  
-DSP pc/p_1_out__44 input pc/p_1_out__44/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__45 input pc/p_1_out__45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#126 Warning
 Input pipelining  
-DSP pc/p_1_out__44 input pc/p_1_out__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__45 input pc/p_1_out__45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#127 Warning
 Input pipelining  
-DSP pc/p_1_out__45 input pc/p_1_out__45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__46 input pc/p_1_out__46/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#128 Warning
 Input pipelining  
-DSP pc/p_1_out__45 input pc/p_1_out__45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__46 input pc/p_1_out__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#129 Warning
 Input pipelining  
-DSP pc/p_1_out__46 input pc/p_1_out__46/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__47 input pc/p_1_out__47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#130 Warning
 Input pipelining  
-DSP pc/p_1_out__46 input pc/p_1_out__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__47 input pc/p_1_out__47/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#131 Warning
 Input pipelining  
-DSP pc/p_1_out__47 input pc/p_1_out__47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__48 input pc/p_1_out__48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#132 Warning
 Input pipelining  
-DSP pc/p_1_out__47 input pc/p_1_out__47/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__48 input pc/p_1_out__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#133 Warning
 Input pipelining  
-DSP pc/p_1_out__48 input pc/p_1_out__48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__49 input pc/p_1_out__49/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#134 Warning
 Input pipelining  
-DSP pc/p_1_out__48 input pc/p_1_out__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__49 input pc/p_1_out__49/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#135 Warning
 Input pipelining  
-DSP pc/p_1_out__49 input pc/p_1_out__49/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__5 input pc/p_1_out__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#136 Warning
 Input pipelining  
-DSP pc/p_1_out__49 input pc/p_1_out__49/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__5 input pc/p_1_out__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#137 Warning
 Input pipelining  
-DSP pc/p_1_out__5 input pc/p_1_out__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__50 input pc/p_1_out__50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#138 Warning
 Input pipelining  
-DSP pc/p_1_out__5 input pc/p_1_out__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__50 input pc/p_1_out__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#139 Warning
 Input pipelining  
-DSP pc/p_1_out__50 input pc/p_1_out__50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__51 input pc/p_1_out__51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#140 Warning
 Input pipelining  
-DSP pc/p_1_out__50 input pc/p_1_out__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__51 input pc/p_1_out__51/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#141 Warning
 Input pipelining  
-DSP pc/p_1_out__51 input pc/p_1_out__51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__52 input pc/p_1_out__52/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#142 Warning
 Input pipelining  
-DSP pc/p_1_out__51 input pc/p_1_out__51/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__52 input pc/p_1_out__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#143 Warning
 Input pipelining  
-DSP pc/p_1_out__52 input pc/p_1_out__52/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__53 input pc/p_1_out__53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#144 Warning
 Input pipelining  
-DSP pc/p_1_out__52 input pc/p_1_out__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__53 input pc/p_1_out__53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#145 Warning
 Input pipelining  
-DSP pc/p_1_out__53 input pc/p_1_out__53/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__54 input pc/p_1_out__54/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#146 Warning
 Input pipelining  
-DSP pc/p_1_out__53 input pc/p_1_out__53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__54 input pc/p_1_out__54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#147 Warning
 Input pipelining  
-DSP pc/p_1_out__54 input pc/p_1_out__54/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__55 input pc/p_1_out__55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#148 Warning
 Input pipelining  
-DSP pc/p_1_out__54 input pc/p_1_out__54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__55 input pc/p_1_out__55/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#149 Warning
 Input pipelining  
-DSP pc/p_1_out__55 input pc/p_1_out__55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__56 input pc/p_1_out__56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#150 Warning
 Input pipelining  
-DSP pc/p_1_out__55 input pc/p_1_out__55/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__56 input pc/p_1_out__56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#151 Warning
 Input pipelining  
-DSP pc/p_1_out__56 input pc/p_1_out__56/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__57 input pc/p_1_out__57/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#152 Warning
 Input pipelining  
-DSP pc/p_1_out__56 input pc/p_1_out__56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__57 input pc/p_1_out__57/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#153 Warning
 Input pipelining  
-DSP pc/p_1_out__57 input pc/p_1_out__57/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__58 input pc/p_1_out__58/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#154 Warning
 Input pipelining  
-DSP pc/p_1_out__57 input pc/p_1_out__57/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__58 input pc/p_1_out__58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#155 Warning
 Input pipelining  
-DSP pc/p_1_out__58 input pc/p_1_out__58/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__6 input pc/p_1_out__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#156 Warning
 Input pipelining  
-DSP pc/p_1_out__58 input pc/p_1_out__58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__6 input pc/p_1_out__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#157 Warning
 Input pipelining  
-DSP pc/p_1_out__6 input pc/p_1_out__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__7 input pc/p_1_out__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#158 Warning
 Input pipelining  
-DSP pc/p_1_out__6 input pc/p_1_out__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__7 input pc/p_1_out__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#159 Warning
 Input pipelining  
-DSP pc/p_1_out__7 input pc/p_1_out__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__8 input pc/p_1_out__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#160 Warning
 Input pipelining  
-DSP pc/p_1_out__7 input pc/p_1_out__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP pc/p_1_out__8 input pc/p_1_out__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#161 Warning
 Input pipelining  
-DSP pc/p_1_out__8 input pc/p_1_out__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#162 Warning
-Input pipelining  
-DSP pc/p_1_out__8 input pc/p_1_out__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#163 Warning
-Input pipelining  
 DSP pc/p_1_out__9 input pc/p_1_out__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPIP-1#164 Warning
+DPIP-1#162 Warning
 Input pipelining  
 DSP pc/p_1_out__9 input pc/p_1_out__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -957,12 +947,12 @@ Related violations: <none>
 
 DPOP-1#21 Warning
 PREG Output pipelining  
-DSP pc/collision20 output pc/collision20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP pc/collision4 output pc/collision4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#22 Warning
 PREG Output pipelining  
-DSP pc/collision20__0 output pc/collision20__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP pc/collision4__0 output pc/collision4__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#23 Warning
@@ -1367,12 +1357,12 @@ Related violations: <none>
 
 DPOP-2#21 Warning
 MREG Output pipelining  
-DSP pc/collision20 multiplier stage pc/collision20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP pc/collision4 multiplier stage pc/collision4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#22 Warning
 MREG Output pipelining  
-DSP pc/collision20__0 multiplier stage pc/collision20__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP pc/collision4__0 multiplier stage pc/collision4__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#23 Warning

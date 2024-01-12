@@ -201,16 +201,16 @@ module player_control(clk, rst, falling, left, right, test_falling, test_left, t
                 y_dis_8 = (y_pos > y_8) ? (y_pos - y_8) * (y_pos - y_8) : (y_8 - y_pos) * (y_8 - y_pos);
                 x_dis_9 = (x_pos > x_9) ? (x_pos - x_9) * (x_pos - x_9) : (x_9 - x_pos) * (x_9 - x_pos);
                 y_dis_9 = (y_pos > y_9) ? (y_pos - y_9) * (y_pos - y_9) : (y_9 - y_pos) * (y_9 - y_pos);
-                s_dis_0 = (ball_size == size_1) ? (ball_size + s_0 + 1) * (ball_size + s_0 + 1) : (ball_size + s_0 + 2) * (ball_size + s_0 + 1);
-                s_dis_1 = (ball_size == size_1) ? (ball_size + s_1 + 1) * (ball_size + s_1 + 1) : (ball_size + s_1 + 2) * (ball_size + s_1 + 1);
-                s_dis_2 = (ball_size == size_1) ? (ball_size + s_2 + 1) * (ball_size + s_2 + 1) : (ball_size + s_2 + 2) * (ball_size + s_2 + 1);
-                s_dis_3 = (ball_size == size_1) ? (ball_size + s_3 + 1) * (ball_size + s_3 + 1) : (ball_size + s_3 + 2) * (ball_size + s_3 + 1);
-                s_dis_4 = (ball_size == size_1) ? (ball_size + s_4 + 1) * (ball_size + s_4 + 1) : (ball_size + s_4 + 2) * (ball_size + s_4 + 1);
-                s_dis_5 = (ball_size == size_1) ? (ball_size + s_5 + 1) * (ball_size + s_5 + 1) : (ball_size + s_5 + 2) * (ball_size + s_5 + 1);
-                s_dis_6 = (ball_size == size_1) ? (ball_size + s_6 + 1) * (ball_size + s_6 + 1) : (ball_size + s_6 + 2) * (ball_size + s_6 + 1);
-                s_dis_7 = (ball_size == size_1) ? (ball_size + s_7 + 1) * (ball_size + s_7 + 1) : (ball_size + s_7 + 2) * (ball_size + s_7 + 1);
-                s_dis_8 = (ball_size == size_1) ? (ball_size + s_8 + 1) * (ball_size + s_8 + 1) : (ball_size + s_8 + 2) * (ball_size + s_8 + 1);
-                s_dis_9 = (ball_size == size_1) ? (ball_size + s_9 + 1) * (ball_size + s_9 + 1) : (ball_size + s_9 + 2) * (ball_size + s_9 + 1);
+                s_dis_0 = (ball_size == size_1) ? (ball_size + s_0) * (ball_size + s_0) : (ball_size + s_0 + 2) * (ball_size + s_0 + 1);
+                s_dis_1 = (ball_size == size_1) ? (ball_size + s_1) * (ball_size + s_1) : (ball_size + s_1 + 2) * (ball_size + s_1 + 1);
+                s_dis_2 = (ball_size == size_1) ? (ball_size + s_2) * (ball_size + s_2) : (ball_size + s_2 + 2) * (ball_size + s_2 + 1);
+                s_dis_3 = (ball_size == size_1) ? (ball_size + s_3) * (ball_size + s_3) : (ball_size + s_3 + 2) * (ball_size + s_3 + 1);
+                s_dis_4 = (ball_size == size_1) ? (ball_size + s_4) * (ball_size + s_4) : (ball_size + s_4 + 2) * (ball_size + s_4 + 1);
+                s_dis_5 = (ball_size == size_1) ? (ball_size + s_5) * (ball_size + s_5) : (ball_size + s_5 + 2) * (ball_size + s_5 + 1);
+                s_dis_6 = (ball_size == size_1) ? (ball_size + s_6) * (ball_size + s_6) : (ball_size + s_6 + 2) * (ball_size + s_6 + 1);
+                s_dis_7 = (ball_size == size_1) ? (ball_size + s_7) * (ball_size + s_7) : (ball_size + s_7 + 2) * (ball_size + s_7 + 1);
+                s_dis_8 = (ball_size == size_1) ? (ball_size + s_8) * (ball_size + s_8) : (ball_size + s_8 + 2) * (ball_size + s_8 + 1);
+                s_dis_9 = (ball_size == size_1) ? (ball_size + s_9) * (ball_size + s_9) : (ball_size + s_9 + 2) * (ball_size + s_9 + 1);
                 if(y_pos < 10'd240 - ball_size) begin
                     next_state = `falling_state;
 

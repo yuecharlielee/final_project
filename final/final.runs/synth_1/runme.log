@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 61624
+INFO: [Synth 8-7075] Helper process launched with PID 67244
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.879 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/final_project/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/final_project/clock_divisor.v:1]
@@ -50,8 +50,8 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/final_project/Key
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-54552-lap180903/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (3#1) [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-54552-lap180903/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-17808-lap180903/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (3#1) [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-17808-lap180903/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/final_project/onepulse.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (4#1) [C:/final_project/onepulse.v:1]
 INFO: [Synth 8-226] default block is never used [C:/final_project/KeyboardDecoder.v:69]
@@ -78,8 +78,8 @@ WARNING: [Synth 8-689] width (10) of port connection 's_8' does not match port w
 WARNING: [Synth 8-689] width (10) of port connection 's_9' does not match port width (12) of module 'player_control' [C:/final_project/top.v:105]
 INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/final_project/mem_gen.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (7#1) [C:/final_project/mem_gen.v:3]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-54552-lap180903/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-54552-lap180903/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-17808-lap180903/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (8#1) [C:/final_project/final/final.runs/synth_1/.Xil/Vivado-17808-lap180903/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/final_project/vga.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (9#1) [C:/final_project/vga.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MusicMain' [C:/final_project/musicmain.v:1]
@@ -96,18 +96,18 @@ INFO: [Synth 8-6155] done synthesizing module 'Music' (12#1) [C:/final_project/m
 INFO: [Synth 8-6155] done synthesizing module 'MusicMain' (13#1) [C:/final_project/musicmain.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [C:/final_project/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1018.879 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1015.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1018.879 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1018.879 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.715 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1018.879 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1015.715 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -122,20 +122,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1100.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1106.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1100.008 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1106.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.008 ; gain = 81.129
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.988 ; gain = 91.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.008 ; gain = 81.129
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.988 ; gain = 91.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -147,7 +147,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:
 Applied set_property KEEP_HIERARCHY = SOFT for key_de/inst. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for BMG0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.008 ; gain = 81.129
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.988 ; gain = 91.273
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------------------------
@@ -162,7 +162,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'next_y_pos_reg' [C:/final_project/player_control.v:150]
 WARNING: [Synth 8-327] inferring latch for variable 'next_total_col_reg' [C:/final_project/player_control.v:218]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1100.008 ; gain = 81.129
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1106.988 ; gain = 91.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,7 +176,7 @@ Detailed RTL Component Info :
 	   3 Input   20 Bit       Adders := 20    
 	   2 Input   20 Bit       Adders := 10    
 	   3 Input   17 Bit       Adders := 10    
-	   2 Input   14 Bit       Adders := 20    
+	   2 Input   14 Bit       Adders := 10    
 	   2 Input   13 Bit       Adders := 11    
 	   3 Input   13 Bit       Adders := 10    
 	   2 Input   12 Bit       Adders := 23    
@@ -197,10 +197,9 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 13    
 +---Muxes : 
 	   2 Input  512 Bit        Muxes := 1     
-	   2 Input   27 Bit        Muxes := 20    
+	   2 Input   27 Bit        Muxes := 30    
 	   2 Input   17 Bit        Muxes := 24    
 	   5 Input   17 Bit        Muxes := 20    
-	   2 Input   14 Bit        Muxes := 10    
 	   2 Input   12 Bit        Muxes := 18    
 	   4 Input   10 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 2     
@@ -232,8 +231,11 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -252,8 +254,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -272,8 +277,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -292,8 +300,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -312,8 +323,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -332,8 +346,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -352,8 +369,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -372,8 +392,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -392,8 +415,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -412,8 +438,11 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is: A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is: A*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: Generating DSP collision4, operation Mode is: (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -559,7 +588,7 @@ DSP Report: Generating DSP count_duty0, operation Mode is: A*B.
 DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
 DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:27 . Memory (MB): peak = 1100.008 ; gain = 81.129
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:28 . Memory (MB): peak = 1107.715 ; gain = 92.000
 ---------------------------------------------------------------------------------
 DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
@@ -633,8 +662,9 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is (post resource management): A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is (post resource management): (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -725,8 +755,9 @@ DSP Report: operator p_0_out is absorbed into DSP p_1_out.
 DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
-DSP Report: Generating DSP collision20, operation Mode is (post resource management): A*B.
-DSP Report: operator collision20 is absorbed into DSP collision20.
+DSP Report: Generating DSP collision4, operation Mode is (post resource management): (D+(A:0x2))*B.
+DSP Report: operator collision4 is absorbed into DSP collision4.
+DSP Report: operator collision5 is absorbed into DSP collision4.
 DSP Report: Generating DSP p_1_out, operation Mode is (post resource management): A*B.
 DSP Report: operator p_1_out is absorbed into DSP p_1_out.
 DSP Report: operator p_0_out is absorbed into DSP p_1_out.
@@ -814,7 +845,6 @@ ROM: Preliminary Mapping	Report
 |Module Name | RTL Object | Depth x Width | Implemented As | 
 +------------+------------+---------------+----------------+
 |Music       | tone       | 256x12        | LUT            | 
-|Music       | tone       | 256x12        | LUT            | 
 +------------+------------+---------------+----------------+
 
 
@@ -822,70 +852,80 @@ DSP: Preliminary Mapping	Report (see note below)
 +---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name    | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | (PCIN>>17)+A*B   | 10     | 10     | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|player_control | A*B              | 14     | 14     | -      | -      | 28     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | A*B              | 13     | 13     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|player_control | (D+(A:0x2))*B    | 2      | 14     | -      | 13     | 28     | 0    | 0    | -    | 0    | 0     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 11     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |player_control | A*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -954,19 +994,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 1112.133 ; gain = 93.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:35 . Memory (MB): peak = 1119.016 ; gain = 103.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:35 . Memory (MB): peak = 1133.836 ; gain = 114.957
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:35 . Memory (MB): peak = 1142.328 ; gain = 126.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:38 . Memory (MB): peak = 1225.836 ; gain = 206.957
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:39 . Memory (MB): peak = 1243.102 ; gain = 227.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -996,37 +1036,37 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[2
 CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module BMG0 has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:41 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:41 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:41 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:41 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1047,34 +1087,34 @@ Report Cell Usage:
 |1     |KeyboardCtrl |     1|
 |2     |blk_mem_gen  |     1|
 |3     |BUFG         |     2|
-|4     |CARRY4       |  1255|
+|4     |CARRY4       |  1345|
 |5     |DSP48E1      |    82|
-|6     |LUT1         |   617|
-|7     |LUT2         |  2005|
-|8     |LUT3         |   904|
-|9     |LUT4         |   967|
-|10    |LUT5         |   506|
-|11    |LUT6         |  1210|
-|12    |FDCE         |    91|
-|13    |FDRE         |   268|
-|14    |FDSE         |    90|
-|15    |LD           |     9|
-|16    |IBUF         |     5|
-|17    |OBUF         |    21|
+|7     |LUT1         |   608|
+|8     |LUT2         |  2231|
+|9     |LUT3         |   988|
+|10    |LUT4         |  1022|
+|11    |LUT5         |   688|
+|12    |LUT6         |  1306|
+|13    |FDCE         |    91|
+|14    |FDRE         |   268|
+|15    |FDSE         |    90|
+|16    |LD           |     9|
+|17    |IBUF         |     5|
+|18    |OBUF         |    21|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 12 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:40 . Memory (MB): peak = 1240.664 ; gain = 140.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:42 . Memory (MB): peak = 1240.664 ; gain = 221.785
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:40 . Memory (MB): peak = 1257.844 ; gain = 150.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 1257.844 ; gain = 242.129
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 1240.664 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1346 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1257.844 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1436 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1240.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1257.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   LD => LDCE: 9 instances
@@ -1082,8 +1122,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 58 Infos, 12 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 1240.664 ; gain = 221.785
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:48 . Memory (MB): peak = 1257.844 ; gain = 242.129
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/final_project/final/final.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 12 08:03:38 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 12 08:20:32 2024...

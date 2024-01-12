@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Jan 12 08:04:23 2024
+| Date         : Fri Jan 12 08:21:19 2024
 | Host         : lap180903 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              48 |           19 |
-| No           | No                    | Yes                    |             139 |           42 |
-| No           | Yes                   | No                     |              47 |           24 |
+| No           | No                    | No                     |              48 |           17 |
+| No           | No                    | Yes                    |             139 |           44 |
+| No           | Yes                   | No                     |              47 |           20 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              43 |           11 |
-| Yes          | Yes                   | No                     |             282 |          104 |
+| Yes          | No                    | Yes                    |              43 |           14 |
+| Yes          | Yes                   | No                     |             282 |          101 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,33 +73,33 @@ Table of Contents
 +-----------------------------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 |            Clock Signal           |                   Enable Signal                   |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG                    | key_de/inst/inst/lock_status0                     | rst_IBUF                 |                1 |              2 |         2.00 |
-|  CD0/Q_BUFG[0]                    |                                                   | rst_IBUF                 |                1 |              2 |         2.00 |
+|  CD0/Q_BUFG[0]                    |                                                   | rst_IBUF                 |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG                    | key_de/inst/inst/lock_status0                     | rst_IBUF                 |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                 |                1 |              4 |         4.00 |
-|  music/btSpeedGen/beatFreq        |                                                   | rst_IBUF                 |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                 |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                 |                3 |              8 |         2.67 |
-|  pc/next_total_col_reg[8]_i_2_n_0 |                                                   |                          |                4 |              9 |         2.25 |
-|  clk_IBUF_BUFG                    | key_de/next_key                                   | rst_IBUF                 |                2 |             10 |         5.00 |
-|  clk_d22_BUFG                     | pc/p_0_in0                                        | rst_IBUF                 |                6 |             10 |         1.67 |
-|  CD0/Q_BUFG[0]                    |                                                   |                          |                6 |             10 |         1.67 |
-|  CD0/Q_BUFG[0]                    | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                5 |             10 |         2.00 |
+|  music/btSpeedGen/beatFreq        |                                                   | rst_IBUF                 |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                 |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                 |                4 |              8 |         2.00 |
+|  pc/next_total_col_reg[8]_i_2_n_0 |                                                   |                          |                3 |              9 |         3.00 |
+|  CD0/Q_BUFG[0]                    |                                                   |                          |                5 |             10 |         2.00 |
+|  CD0/Q_BUFG[0]                    | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                3 |             10 |         3.33 |
+|  clk_d22_BUFG                     | pc/p_0_in0                                        | rst_IBUF                 |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                    | key_de/next_key                                   | rst_IBUF                 |                3 |             10 |         3.33 |
 |  clk_IBUF_BUFG                    | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                 |                2 |             11 |         5.50 |
 |  clk_d22_BUFG                     | pc/x_pos[11]_i_1_n_0                              | rst_IBUF                 |                5 |             12 |         2.40 |
-|  CD0/Q_BUFG[0]                    |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                8 |             16 |         2.00 |
+|  CD0/Q_BUFG[0]                    |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                6 |             16 |         2.67 |
 |  clk_d22_BUFG                     | pc/ball_size[5]_i_1_n_0                           | rst_IBUF                 |                8 |             25 |         3.12 |
-|  clk_d22_BUFG                     | pc/x_4[11]_i_1_n_0                                | rst_IBUF                 |               11 |             25 |         2.27 |
-|  clk_d22_BUFG                     | pc/x_8[11]_i_1_n_0                                | rst_IBUF                 |                9 |             25 |         2.78 |
-|  clk_d22_BUFG                     | pc/x_0[11]_i_1_n_0                                | rst_IBUF                 |                8 |             25 |         3.12 |
+|  clk_d22_BUFG                     | pc/x_4[11]_i_1_n_0                                | rst_IBUF                 |                6 |             25 |         4.17 |
+|  clk_d22_BUFG                     | pc/x_0[11]_i_1_n_0                                | rst_IBUF                 |               10 |             25 |         2.50 |
+|  clk_d22_BUFG                     | pc/x_5[11]_i_1_n_0                                | rst_IBUF                 |                9 |             25 |         2.78 |
+|  clk_d22_BUFG                     | pc/x_8[11]_i_1_n_0                                | rst_IBUF                 |               10 |             25 |         2.50 |
+|  clk_d22_BUFG                     | pc/x_9[11]_i_1_n_0                                | rst_IBUF                 |                9 |             25 |         2.78 |
+|  clk_d22_BUFG                     | pc/x_2[11]_i_1_n_0                                | rst_IBUF                 |               12 |             25 |         2.08 |
 |  clk_d22_BUFG                     | pc/x_7[11]_i_1_n_0                                | rst_IBUF                 |               10 |             25 |         2.50 |
-|  clk_d22_BUFG                     | pc/x_5[11]_i_1_n_0                                | rst_IBUF                 |                8 |             25 |         3.12 |
-|  clk_d22_BUFG                     | pc/x_1[11]_i_1_n_0                                | rst_IBUF                 |                9 |             25 |         2.78 |
-|  clk_d22_BUFG                     | pc/x_2[11]_i_1_n_0                                | rst_IBUF                 |                7 |             25 |         3.57 |
-|  clk_d22_BUFG                     | pc/x_9[11]_i_1_n_0                                | rst_IBUF                 |                8 |             25 |         3.12 |
-|  clk_d22_BUFG                     | pc/x_6[11]_i_1_n_0                                | rst_IBUF                 |               10 |             25 |         2.50 |
+|  clk_d22_BUFG                     | pc/x_6[11]_i_1_n_0                                | rst_IBUF                 |                7 |             25 |         3.57 |
+|  clk_d22_BUFG                     | pc/x_1[11]_i_1_n_0                                | rst_IBUF                 |                8 |             25 |         3.12 |
+|  clk_d22_BUFG                     |                                                   | rst_IBUF                 |               12 |             29 |         2.42 |
 |  clk_IBUF_BUFG                    |                                                   |                          |                9 |             29 |         3.22 |
-|  clk_d22_BUFG                     |                                                   | rst_IBUF                 |               15 |             29 |         1.93 |
-|  clk_IBUF_BUFG                    |                                                   | rst_IBUF                 |               40 |            132 |         3.30 |
+|  clk_IBUF_BUFG                    |                                                   | rst_IBUF                 |               41 |            132 |         3.22 |
 +-----------------------------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 
 

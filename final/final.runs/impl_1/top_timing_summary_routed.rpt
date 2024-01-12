@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Jan 12 08:04:53 2024
+| Date         : Fri Jan 12 08:21:52 2024
 | Host         : lap180903 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
@@ -716,7 +716,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      4.289        0.000                      0                  244        0.155        0.000                      0                  244        4.500        0.000                       0                   205  
+      4.215        0.000                      0                  244        0.079        0.000                      0                  244        4.500        0.000                       0                   205  
 
 
 All user specified timing constraints are met.
@@ -739,7 +739,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         4.289        0.000                      0                  244        0.155        0.000                      0                  244        4.500        0.000                       0                   205  
+sys_clk_pin         4.215        0.000                      0                  244        0.079        0.000                      0                  244        4.500        0.000                       0                   205  
 
 
 ------------------------------------------------------------------------------------------------
@@ -770,15 +770,15 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        4.289ns,  Total Violation        0.000ns
-Hold  :            0  Failing Endpoints,  Worst Slack        0.155ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        4.215ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.079ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             4.289ns  (required time - arrival time)
+Slack (MET) :             4.215ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[29]/D
@@ -786,11 +786,11 @@ Slack (MET) :             4.289ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.759ns  (logic 3.193ns (55.446%)  route 2.566ns (44.554%))
-  Logic Levels:           13  (CARRY4=11 LUT2=2)
+  Data Path Delay:        5.832ns  (logic 3.213ns (55.091%)  route 2.619ns (44.909%))
+  Logic Levels:           12  (CARRY4=10 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -807,49 +807,46 @@ Slack (MET) :             4.289ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
     SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.583 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.583    music/btSpeedGen/count_reg[24]_i_1_n_0
-    SLICE_X2Y58          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.323    10.906 r  music/btSpeedGen/count_reg[28]_i_1/O[1]
-                         net (fo=1, routed)           0.000    10.906    music/btSpeedGen/count_reg[28]_i_1_n_6
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[29]/D
+                                                      0.117    10.657 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.657    music/btSpeedGen/count_reg[24]_i_1_n_0
+    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.980 r  music/btSpeedGen/count_reg[28]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.980    music/btSpeedGen/count_reg[28]_i_1_n_6
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[29]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -859,18 +856,18 @@ Slack (MET) :             4.289ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[29]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y58          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[29]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[29]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y55          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[29]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.906    
+                         required time                         15.196    
+                         arrival time                         -10.980    
   -------------------------------------------------------------------
-                         slack                                  4.289    
+                         slack                                  4.215    
 
-Slack (MET) :             4.297ns  (required time - arrival time)
+Slack (MET) :             4.223ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[31]/D
@@ -878,11 +875,11 @@ Slack (MET) :             4.297ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.751ns  (logic 3.185ns (55.384%)  route 2.566ns (44.616%))
-  Logic Levels:           13  (CARRY4=11 LUT2=2)
+  Data Path Delay:        5.824ns  (logic 3.205ns (55.029%)  route 2.619ns (44.971%))
+  Logic Levels:           12  (CARRY4=10 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -899,49 +896,46 @@ Slack (MET) :             4.297ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
     SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.583 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.583    music/btSpeedGen/count_reg[24]_i_1_n_0
-    SLICE_X2Y58          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315    10.898 r  music/btSpeedGen/count_reg[28]_i_1/O[3]
-                         net (fo=1, routed)           0.000    10.898    music/btSpeedGen/count_reg[28]_i_1_n_4
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[31]/D
+                                                      0.117    10.657 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.657    music/btSpeedGen/count_reg[24]_i_1_n_0
+    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    10.972 r  music/btSpeedGen/count_reg[28]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.972    music/btSpeedGen/count_reg[28]_i_1_n_4
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[31]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -951,18 +945,18 @@ Slack (MET) :             4.297ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[31]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y58          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[31]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[31]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y55          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[31]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.898    
+                         required time                         15.196    
+                         arrival time                         -10.972    
   -------------------------------------------------------------------
-                         slack                                  4.297    
+                         slack                                  4.223    
 
-Slack (MET) :             4.373ns  (required time - arrival time)
+Slack (MET) :             4.299ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[30]/D
@@ -970,11 +964,11 @@ Slack (MET) :             4.373ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.675ns  (logic 3.109ns (54.786%)  route 2.566ns (45.214%))
-  Logic Levels:           13  (CARRY4=11 LUT2=2)
+  Data Path Delay:        5.748ns  (logic 3.129ns (54.435%)  route 2.619ns (45.565%))
+  Logic Levels:           12  (CARRY4=10 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -991,49 +985,46 @@ Slack (MET) :             4.373ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
     SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.583 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.583    music/btSpeedGen/count_reg[24]_i_1_n_0
-    SLICE_X2Y58          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    10.822 r  music/btSpeedGen/count_reg[28]_i_1/O[2]
-                         net (fo=1, routed)           0.000    10.822    music/btSpeedGen/count_reg[28]_i_1_n_5
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[30]/D
+                                                      0.117    10.657 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.657    music/btSpeedGen/count_reg[24]_i_1_n_0
+    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.896 r  music/btSpeedGen/count_reg[28]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.896    music/btSpeedGen/count_reg[28]_i_1_n_5
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[30]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1043,18 +1034,18 @@ Slack (MET) :             4.373ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[30]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y58          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[30]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[30]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y55          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[30]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.822    
+                         required time                         15.196    
+                         arrival time                         -10.896    
   -------------------------------------------------------------------
-                         slack                                  4.373    
+                         slack                                  4.299    
 
-Slack (MET) :             4.393ns  (required time - arrival time)
+Slack (MET) :             4.319ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[28]/D
@@ -1062,11 +1053,11 @@ Slack (MET) :             4.393ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.655ns  (logic 3.089ns (54.626%)  route 2.566ns (45.374%))
-  Logic Levels:           13  (CARRY4=11 LUT2=2)
+  Data Path Delay:        5.728ns  (logic 3.109ns (54.276%)  route 2.619ns (45.724%))
+  Logic Levels:           12  (CARRY4=10 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1083,49 +1074,46 @@ Slack (MET) :             4.393ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
     SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.583 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.583    music/btSpeedGen/count_reg[24]_i_1_n_0
-    SLICE_X2Y58          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219    10.802 r  music/btSpeedGen/count_reg[28]_i_1/O[0]
-                         net (fo=1, routed)           0.000    10.802    music/btSpeedGen/count_reg[28]_i_1_n_7
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[28]/D
+                                                      0.117    10.657 r  music/btSpeedGen/count_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.657    music/btSpeedGen/count_reg[24]_i_1_n_0
+    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    10.876 r  music/btSpeedGen/count_reg[28]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.876    music/btSpeedGen/count_reg[28]_i_1_n_7
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[28]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1135,18 +1123,18 @@ Slack (MET) :             4.393ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y58          FDCE                                         r  music/btSpeedGen/count_reg[28]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y58          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[28]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y55          FDCE                                         r  music/btSpeedGen/count_reg[28]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y55          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[28]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.802    
+                         required time                         15.196    
+                         arrival time                         -10.876    
   -------------------------------------------------------------------
-                         slack                                  4.393    
+                         slack                                  4.319    
 
-Slack (MET) :             4.406ns  (required time - arrival time)
+Slack (MET) :             4.332ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[25]/D
@@ -1154,11 +1142,11 @@ Slack (MET) :             4.406ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.642ns  (logic 3.076ns (54.522%)  route 2.566ns (45.478%))
-  Logic Levels:           12  (CARRY4=10 LUT2=2)
+  Data Path Delay:        5.715ns  (logic 3.096ns (54.172%)  route 2.619ns (45.828%))
+  Logic Levels:           11  (CARRY4=9 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1175,46 +1163,43 @@ Slack (MET) :             4.406ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.323    10.789 r  music/btSpeedGen/count_reg[24]_i_1/O[1]
-                         net (fo=1, routed)           0.000    10.789    music/btSpeedGen/count_reg[24]_i_1_n_6
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[25]/D
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
+    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.863 r  music/btSpeedGen/count_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.863    music/btSpeedGen/count_reg[24]_i_1_n_6
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1224,18 +1209,18 @@ Slack (MET) :             4.406ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[25]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y57          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[25]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[25]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y54          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[25]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.789    
+                         required time                         15.196    
+                         arrival time                         -10.863    
   -------------------------------------------------------------------
-                         slack                                  4.406    
+                         slack                                  4.332    
 
-Slack (MET) :             4.414ns  (required time - arrival time)
+Slack (MET) :             4.340ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[27]/D
@@ -1243,11 +1228,11 @@ Slack (MET) :             4.414ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.634ns  (logic 3.068ns (54.457%)  route 2.566ns (45.543%))
-  Logic Levels:           12  (CARRY4=10 LUT2=2)
+  Data Path Delay:        5.707ns  (logic 3.088ns (54.108%)  route 2.619ns (45.893%))
+  Logic Levels:           11  (CARRY4=9 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1264,46 +1249,43 @@ Slack (MET) :             4.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315    10.781 r  music/btSpeedGen/count_reg[24]_i_1/O[3]
-                         net (fo=1, routed)           0.000    10.781    music/btSpeedGen/count_reg[24]_i_1_n_4
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[27]/D
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
+    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    10.855 r  music/btSpeedGen/count_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.855    music/btSpeedGen/count_reg[24]_i_1_n_4
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[27]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1313,18 +1295,18 @@ Slack (MET) :             4.414ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[27]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y57          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[27]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[27]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y54          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[27]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.781    
+                         required time                         15.196    
+                         arrival time                         -10.855    
   -------------------------------------------------------------------
-                         slack                                  4.414    
+                         slack                                  4.340    
 
-Slack (MET) :             4.490ns  (required time - arrival time)
+Slack (MET) :             4.416ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[26]/D
@@ -1332,11 +1314,11 @@ Slack (MET) :             4.490ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.558ns  (logic 2.992ns (53.835%)  route 2.566ns (46.166%))
-  Logic Levels:           12  (CARRY4=10 LUT2=2)
+  Data Path Delay:        5.631ns  (logic 3.012ns (53.488%)  route 2.619ns (46.512%))
+  Logic Levels:           11  (CARRY4=9 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1353,46 +1335,43 @@ Slack (MET) :             4.490ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    10.705 r  music/btSpeedGen/count_reg[24]_i_1/O[2]
-                         net (fo=1, routed)           0.000    10.705    music/btSpeedGen/count_reg[24]_i_1_n_5
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[26]/D
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
+    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.779 r  music/btSpeedGen/count_reg[24]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.779    music/btSpeedGen/count_reg[24]_i_1_n_5
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[26]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1402,18 +1381,18 @@ Slack (MET) :             4.490ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[26]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y57          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[26]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[26]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y54          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[26]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.705    
+                         required time                         15.196    
+                         arrival time                         -10.779    
   -------------------------------------------------------------------
-                         slack                                  4.490    
+                         slack                                  4.416    
 
-Slack (MET) :             4.510ns  (required time - arrival time)
+Slack (MET) :             4.436ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[24]/D
@@ -1421,11 +1400,11 @@ Slack (MET) :             4.510ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.538ns  (logic 2.972ns (53.668%)  route 2.566ns (46.332%))
-  Logic Levels:           12  (CARRY4=10 LUT2=2)
+  Data Path Delay:        5.611ns  (logic 2.992ns (53.322%)  route 2.619ns (46.678%))
+  Logic Levels:           11  (CARRY4=9 LUT2=2)
   Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    4.849ns = ( 14.849 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1442,46 +1421,43 @@ Slack (MET) :             4.510ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
     SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.466 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.466    music/btSpeedGen/count_reg[20]_i_1_n_0
-    SLICE_X2Y57          CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.219    10.685 r  music/btSpeedGen/count_reg[24]_i_1/O[0]
-                         net (fo=1, routed)           0.000    10.685    music/btSpeedGen/count_reg[24]_i_1_n_7
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[24]/D
+                                                      0.117    10.540 r  music/btSpeedGen/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.540    music/btSpeedGen/count_reg[20]_i_1_n_0
+    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    10.759 r  music/btSpeedGen/count_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.759    music/btSpeedGen/count_reg[24]_i_1_n_7
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[24]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1491,18 +1467,18 @@ Slack (MET) :             4.510ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.508    14.849    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y57          FDCE                                         r  music/btSpeedGen/count_reg[24]/C
-                         clock pessimism              0.272    15.121    
-                         clock uncertainty           -0.035    15.086    
-    SLICE_X2Y57          FDCE (Setup_fdce_C_D)        0.109    15.195    music/btSpeedGen/count_reg[24]
+                         net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[24]/C
+                         clock pessimism              0.272    15.122    
+                         clock uncertainty           -0.035    15.087    
+    SLICE_X2Y54          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[24]
   -------------------------------------------------------------------
-                         required time                         15.195    
-                         arrival time                         -10.685    
+                         required time                         15.196    
+                         arrival time                         -10.759    
   -------------------------------------------------------------------
-                         slack                                  4.510    
+                         slack                                  4.436    
 
-Slack (MET) :             4.524ns  (required time - arrival time)
+Slack (MET) :             4.449ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[21]/D
@@ -1510,11 +1486,11 @@ Slack (MET) :             4.524ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.525ns  (logic 2.959ns (53.559%)  route 2.566ns (46.441%))
-  Logic Levels:           11  (CARRY4=9 LUT2=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+  Data Path Delay:        5.598ns  (logic 2.979ns (53.214%)  route 2.619ns (46.786%))
+  Logic Levels:           10  (CARRY4=8 LUT2=2)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1531,43 +1507,40 @@ Slack (MET) :             4.524ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
-    SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.323    10.672 r  music/btSpeedGen/count_reg[20]_i_1/O[1]
-                         net (fo=1, routed)           0.000    10.672    music/btSpeedGen/count_reg[20]_i_1_n_6
-    SLICE_X2Y56          FDCE                                         r  music/btSpeedGen/count_reg[21]/D
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
+    SLICE_X2Y53          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.746 r  music/btSpeedGen/count_reg[20]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.746    music/btSpeedGen/count_reg[20]_i_1_n_6
+    SLICE_X2Y53          FDCE                                         r  music/btSpeedGen/count_reg[21]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1578,17 +1551,17 @@ Slack (MET) :             4.524ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y56          FDCE                                         r  music/btSpeedGen/count_reg[21]/C
+    SLICE_X2Y53          FDCE                                         r  music/btSpeedGen/count_reg[21]/C
                          clock pessimism              0.272    15.122    
                          clock uncertainty           -0.035    15.087    
-    SLICE_X2Y56          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[21]
+    SLICE_X2Y53          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[21]
   -------------------------------------------------------------------
                          required time                         15.196    
-                         arrival time                         -10.672    
+                         arrival time                         -10.746    
   -------------------------------------------------------------------
-                         slack                                  4.524    
+                         slack                                  4.449    
 
-Slack (MET) :             4.532ns  (required time - arrival time)
+Slack (MET) :             4.457ns  (required time - arrival time)
   Source:                 music/btSpeedGen/count_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            music/btSpeedGen/count_reg[23]/D
@@ -1596,11 +1569,11 @@ Slack (MET) :             4.532ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        5.517ns  (logic 2.951ns (53.491%)  route 2.566ns (46.509%))
-  Logic Levels:           11  (CARRY4=9 LUT2=2)
-  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+  Data Path Delay:        5.590ns  (logic 2.971ns (53.147%)  route 2.619ns (46.853%))
+  Logic Levels:           10  (CARRY4=8 LUT2=2)
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    4.850ns = ( 14.850 - 10.000 ) 
-    Source Clock Delay      (SCD):    5.147ns
+    Source Clock Delay      (SCD):    5.148ns
     Clock Pessimism Removal (CPR):    0.272ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -1617,43 +1590,40 @@ Slack (MET) :             4.532ns  (required time - arrival time)
     W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_IBUF_inst/O
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         1.626     5.147    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y54          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
+                         net (fo=204, routed)         1.627     5.148    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X2Y54          FDCE (Prop_fdce_C_Q)         0.518     5.665 r  music/btSpeedGen/count_reg[15]/Q
-                         net (fo=5, routed)           1.002     6.667    music/btSpeedGen/count_reg[15]
-    SLICE_X0Y54          LUT2 (Prop_lut2_I0_O)        0.124     6.791 r  music/btSpeedGen/count1_carry__0_i_7__0/O
-                         net (fo=1, routed)           0.000     6.791    music/btSpeedGen/count1_carry__0_i_7__0_n_0
-    SLICE_X0Y54          CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     7.341 r  music/btSpeedGen/count1_carry__0/CO[3]
-                         net (fo=1, routed)           0.000     7.341    music/btSpeedGen/count1_carry__0_n_0
-    SLICE_X0Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114     7.455 r  music/btSpeedGen/count1_carry__1/CO[3]
-                         net (fo=1, routed)           0.000     7.455    music/btSpeedGen/count1_carry__1_n_0
-    SLICE_X0Y56          CARRY4 (Prop_carry4_CI_CO[1])
-                                                      0.157     7.612 r  music/btSpeedGen/count1_carry__2/CO[1]
-                         net (fo=34, routed)          1.563     9.176    music/btSpeedGen/count1_carry__2_n_2
-    SLICE_X2Y51          LUT2 (Prop_lut2_I0_O)        0.329     9.505 r  music/btSpeedGen/count[0]_i_2/O
-                         net (fo=1, routed)           0.000     9.505    music/btSpeedGen/count[0]_i_2_n_0
-    SLICE_X2Y51          CARRY4 (Prop_carry4_S[3]_CO[3])
-                                                      0.376     9.881 r  music/btSpeedGen/count_reg[0]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.881    music/btSpeedGen/count_reg[0]_i_1_n_0
+    SLICE_X2Y51          FDCE (Prop_fdce_C_Q)         0.518     5.666 r  music/btSpeedGen/count_reg[15]/Q
+                         net (fo=5, routed)           1.002     6.668    music/btSpeedGen/count_reg[15]
+    SLICE_X0Y51          LUT2 (Prop_lut2_I0_O)        0.124     6.792 r  music/btSpeedGen/count1_carry__0_i_7__0/O
+                         net (fo=1, routed)           0.000     6.792    music/btSpeedGen/count1_carry__0_i_7__0_n_0
+    SLICE_X0Y51          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.342 r  music/btSpeedGen/count1_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.342    music/btSpeedGen/count1_carry__0_n_0
+    SLICE_X0Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.456 r  music/btSpeedGen/count1_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.456    music/btSpeedGen/count1_carry__1_n_0
+    SLICE_X0Y53          CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157     7.613 r  music/btSpeedGen/count1_carry__2/CO[1]
+                         net (fo=34, routed)          1.616     9.229    music/btSpeedGen/count1_carry__2_n_2
+    SLICE_X2Y49          LUT2 (Prop_lut2_I0_O)        0.329     9.558 r  music/btSpeedGen/count[4]_i_5/O
+                         net (fo=1, routed)           0.000     9.558    music/btSpeedGen/count[4]_i_5_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513    10.071 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.072    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.189 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.189    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.306 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.306    music/btSpeedGen/count_reg[12]_i_1_n_0
     SLICE_X2Y52          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     9.998 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
-                         net (fo=1, routed)           0.000     9.998    music/btSpeedGen/count_reg[4]_i_1_n_0
-    SLICE_X2Y53          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.115 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.115    music/btSpeedGen/count_reg[8]_i_1_n_0
-    SLICE_X2Y54          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.232 r  music/btSpeedGen/count_reg[12]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.232    music/btSpeedGen/count_reg[12]_i_1_n_0
-    SLICE_X2Y55          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117    10.349 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
-                         net (fo=1, routed)           0.000    10.349    music/btSpeedGen/count_reg[16]_i_1_n_0
-    SLICE_X2Y56          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315    10.664 r  music/btSpeedGen/count_reg[20]_i_1/O[3]
-                         net (fo=1, routed)           0.000    10.664    music/btSpeedGen/count_reg[20]_i_1_n_4
-    SLICE_X2Y56          FDCE                                         r  music/btSpeedGen/count_reg[23]/D
+                                                      0.117    10.423 r  music/btSpeedGen/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.423    music/btSpeedGen/count_reg[16]_i_1_n_0
+    SLICE_X2Y53          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    10.738 r  music/btSpeedGen/count_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.738    music/btSpeedGen/count_reg[20]_i_1_n_4
+    SLICE_X2Y53          FDCE                                         r  music/btSpeedGen/count_reg[23]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1664,15 +1634,15 @@ Slack (MET) :             4.532ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=204, routed)         1.509    14.850    music/btSpeedGen/clk_IBUF_BUFG
-    SLICE_X2Y56          FDCE                                         r  music/btSpeedGen/count_reg[23]/C
+    SLICE_X2Y53          FDCE                                         r  music/btSpeedGen/count_reg[23]/C
                          clock pessimism              0.272    15.122    
                          clock uncertainty           -0.035    15.087    
-    SLICE_X2Y56          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[23]
+    SLICE_X2Y53          FDCE (Setup_fdce_C_D)        0.109    15.196    music/btSpeedGen/count_reg[23]
   -------------------------------------------------------------------
                          required time                         15.196    
-                         arrival time                         -10.664    
+                         arrival time                         -10.738    
   -------------------------------------------------------------------
-                         slack                                  4.532    
+                         slack                                  4.457    
 
 
 
@@ -1680,20 +1650,20 @@ Slack (MET) :             4.532ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             0.155ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/key_in_reg[6]/C
+Slack (MET) :             0.079ns  (arrival time - required time)
+  Source:                 key_de/been_break_reg/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/key_reg[6]/D
+  Destination:            key_de/key_reg[8]/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.289ns  (logic 0.186ns (64.307%)  route 0.103ns (35.693%))
+  Data Path Delay:        0.433ns  (logic 0.209ns (48.247%)  route 0.224ns (51.753%))
   Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.954ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -1704,14 +1674,14 @@ Slack (MET) :             0.155ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/inst/inst/clk
-    SLICE_X43Y55         FDCE                                         r  key_de/inst/inst/key_in_reg[6]/C
+                         net (fo=204, routed)         0.559     1.442    key_de/clk_IBUF_BUFG
+    SLICE_X34Y37         FDCE                                         r  key_de/been_break_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y55         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  key_de/inst/inst/key_in_reg[6]/Q
-                         net (fo=2, routed)           0.103     1.688    key_de/key_in[6]
-    SLICE_X42Y55         LUT2 (Prop_lut2_I1_O)        0.045     1.733 r  key_de/key[6]_i_1/O
-                         net (fo=1, routed)           0.000     1.733    key_de/next_key0_in[6]
-    SLICE_X42Y55         FDCE                                         r  key_de/key_reg[6]/D
+    SLICE_X34Y37         FDCE (Prop_fdce_C_Q)         0.164     1.606 r  key_de/been_break_reg/Q
+                         net (fo=2, routed)           0.224     1.830    key_de/been_break
+    SLICE_X36Y36         LUT2 (Prop_lut2_I1_O)        0.045     1.875 r  key_de/key[8]_i_1/O
+                         net (fo=1, routed)           0.000     1.875    key_de/next_key0_in[8]
+    SLICE_X36Y36         FDCE                                         r  key_de/key_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1721,285 +1691,30 @@ Slack (MET) :             0.155ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/clk_IBUF_BUFG
-    SLICE_X42Y55         FDCE                                         r  key_de/key_reg[6]/C
-                         clock pessimism             -0.501     1.457    
-    SLICE_X42Y55         FDCE (Hold_fdce_C_D)         0.121     1.578    key_de/key_reg[6]
+                         net (fo=204, routed)         0.827     1.954    key_de/clk_IBUF_BUFG
+    SLICE_X36Y36         FDCE                                         r  key_de/key_reg[8]/C
+                         clock pessimism             -0.249     1.705    
+    SLICE_X36Y36         FDCE (Hold_fdce_C_D)         0.091     1.796    key_de/key_reg[8]
   -------------------------------------------------------------------
-                         required time                         -1.578    
-                         arrival time                           1.733    
+                         required time                         -1.796    
+                         arrival time                           1.875    
   -------------------------------------------------------------------
-                         slack                                  0.155    
+                         slack                                  0.079    
 
-Slack (MET) :             0.176ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/Ps2Interface_i/clk_count_reg[3]/C
+Slack (MET) :             0.110ns  (arrival time - required time)
+  Source:                 key_de/been_ready_reg/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/Ps2Interface_i/ps2_clk_s_reg/D
-                            (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.281ns  (logic 0.186ns (66.111%)  route 0.095ns (33.889%))
-  Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.500ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X36Y56         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/clk_count_reg[3]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X36Y56         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  key_de/inst/inst/Ps2Interface_i/clk_count_reg[3]/Q
-                         net (fo=5, routed)           0.095     1.681    key_de/inst/inst/Ps2Interface_i/clk_count[3]
-    SLICE_X37Y56         LUT6 (Prop_lut6_I0_O)        0.045     1.726 r  key_de/inst/inst/Ps2Interface_i/ps2_clk_s_i_1/O
-                         net (fo=1, routed)           0.000     1.726    key_de/inst/inst/Ps2Interface_i/ps2_clk_s_i_1_n_0
-    SLICE_X37Y56         FDPE                                         r  key_de/inst/inst/Ps2Interface_i/ps2_clk_s_reg/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.829     1.957    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X37Y56         FDPE                                         r  key_de/inst/inst/Ps2Interface_i/ps2_clk_s_reg/C
-                         clock pessimism             -0.500     1.457    
-    SLICE_X37Y56         FDPE (Hold_fdpe_C_D)         0.092     1.549    key_de/inst/inst/Ps2Interface_i/ps2_clk_s_reg
-  -------------------------------------------------------------------
-                         required time                         -1.549    
-                         arrival time                           1.726    
-  -------------------------------------------------------------------
-                         slack                                  0.176    
-
-Slack (MET) :             0.190ns  (arrival time - required time)
-  Source:                 key_de/op/signal_single_pulse_reg/C
+  Destination:            key_de/op/signal_delay_reg/D
                             (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/key_down_reg[28]/D
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.347ns  (logic 0.209ns (60.248%)  route 0.138ns (39.752%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.478ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/op/clk_IBUF_BUFG
-    SLICE_X38Y53         FDRE                                         r  key_de/op/signal_single_pulse_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X38Y53         FDRE (Prop_fdre_C_Q)         0.164     1.608 r  key_de/op/signal_single_pulse_reg/Q
-                         net (fo=3, routed)           0.138     1.746    key_de/op/pulse_been_ready
-    SLICE_X42Y53         LUT4 (Prop_lut4_I2_O)        0.045     1.791 r  key_de/op/key_down[28]_i_1/O
-                         net (fo=1, routed)           0.000     1.791    key_de/op_n_2
-    SLICE_X42Y53         FDCE                                         r  key_de/key_down_reg[28]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/clk_IBUF_BUFG
-    SLICE_X42Y53         FDCE                                         r  key_de/key_down_reg[28]/C
-                         clock pessimism             -0.478     1.480    
-    SLICE_X42Y53         FDCE (Hold_fdce_C_D)         0.121     1.601    key_de/key_down_reg[28]
-  -------------------------------------------------------------------
-                         required time                         -1.601    
-                         arrival time                           1.791    
-  -------------------------------------------------------------------
-                         slack                                  0.190    
-
-Slack (MET) :             0.191ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/key_in_reg[0]/C
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/key_reg[0]/D
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.328ns  (logic 0.209ns (63.666%)  route 0.119ns (36.334%))
-  Logic Levels:           1  (LUT2=1)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.498ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/inst/inst/clk
-    SLICE_X42Y56         FDCE                                         r  key_de/inst/inst/key_in_reg[0]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X42Y56         FDCE (Prop_fdce_C_Q)         0.164     1.608 r  key_de/inst/inst/key_in_reg[0]/Q
-                         net (fo=2, routed)           0.119     1.728    key_de/key_in[0]
-    SLICE_X42Y55         LUT2 (Prop_lut2_I1_O)        0.045     1.773 r  key_de/key[0]_i_1/O
-                         net (fo=1, routed)           0.000     1.773    key_de/next_key0_in[0]
-    SLICE_X42Y55         FDCE                                         r  key_de/key_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/clk_IBUF_BUFG
-    SLICE_X42Y55         FDCE                                         r  key_de/key_reg[0]/C
-                         clock pessimism             -0.498     1.460    
-    SLICE_X42Y55         FDCE (Hold_fdce_C_D)         0.121     1.581    key_de/key_reg[0]
-  -------------------------------------------------------------------
-                         required time                         -1.581    
-                         arrival time                           1.773    
-  -------------------------------------------------------------------
-                         slack                                  0.191    
-
-Slack (MET) :             0.196ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/Ps2Interface_i/err_reg/C
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/FSM_onehot_state_reg[0]/D
-                            (rising edge-triggered cell FDPE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.324ns  (logic 0.186ns (57.393%)  route 0.138ns (42.607%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.443ns
-    Clock Pessimism Removal (CPR):    0.478ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.560     1.443    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X41Y57         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/err_reg/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X41Y57         FDCE (Prop_fdce_C_Q)         0.141     1.584 r  key_de/inst/inst/Ps2Interface_i/err_reg/Q
-                         net (fo=6, routed)           0.138     1.722    key_de/inst/inst/Ps2Interface_i/err_reg_0
-    SLICE_X44Y57         LUT5 (Prop_lut5_I0_O)        0.045     1.767 r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state[0]_i_1__0/O
-                         net (fo=1, routed)           0.000     1.767    key_de/inst/inst/Ps2Interface_i_n_17
-    SLICE_X44Y57         FDPE                                         r  key_de/inst/inst/FSM_onehot_state_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/inst/inst/clk
-    SLICE_X44Y57         FDPE                                         r  key_de/inst/inst/FSM_onehot_state_reg[0]/C
-                         clock pessimism             -0.478     1.480    
-    SLICE_X44Y57         FDPE (Hold_fdpe_C_D)         0.091     1.571    key_de/inst/inst/FSM_onehot_state_reg[0]
-  -------------------------------------------------------------------
-                         required time                         -1.571    
-                         arrival time                           1.767    
-  -------------------------------------------------------------------
-                         slack                                  0.196    
-
-Slack (MET) :             0.201ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/tx_data_reg[1]/C
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/Ps2Interface_i/frame_reg[3]/D
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.367ns  (logic 0.189ns (51.438%)  route 0.178ns (48.562%))
-  Logic Levels:           1  (LUT4=1)
-  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.478ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.631     0.858    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/inst/inst/clk
-    SLICE_X45Y57         FDCE                                         r  key_de/inst/inst/tx_data_reg[1]/C
-  -------------------------------------------------------------------    -------------------
-    SLICE_X45Y57         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  key_de/inst/inst/tx_data_reg[1]/Q
-                         net (fo=5, routed)           0.178     1.764    key_de/inst/inst/Ps2Interface_i/frame_reg[4]_0[0]
-    SLICE_X42Y58         LUT4 (Prop_lut4_I0_O)        0.048     1.812 r  key_de/inst/inst/Ps2Interface_i/frame[3]_i_1/O
-                         net (fo=1, routed)           0.000     1.812    key_de/inst/inst/Ps2Interface_i/frame[3]_i_1_n_0
-    SLICE_X42Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/frame_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock sys_clk_pin rise edge)
-                                                      0.000     0.000 r  
-    W5                                                0.000     0.000 r  clk (IN)
-                         net (fo=0)                   0.000     0.000    clk
-    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
-                         net (fo=1, routed)           0.685     1.099    clk_IBUF
-    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.830     1.957    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X42Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/frame_reg[3]/C
-                         clock pessimism             -0.478     1.479    
-    SLICE_X42Y58         FDCE (Hold_fdce_C_D)         0.131     1.610    key_de/inst/inst/Ps2Interface_i/frame_reg[3]
-  -------------------------------------------------------------------
-                         required time                         -1.610    
-                         arrival time                           1.812    
-  -------------------------------------------------------------------
-                         slack                                  0.201    
-
-Slack (MET) :             0.206ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/Ps2Interface_i/rx_data_reg[0]/C
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/key_in_reg[0]/D
-                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             sys_clk_pin
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.282ns  (logic 0.141ns (50.087%)  route 0.141ns (49.913%))
+  Data Path Delay:        0.391ns  (logic 0.148ns (37.875%)  route 0.243ns (62.125%))
   Logic Levels:           0  
-  Clock Path Skew:        0.017ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.443ns
-    Clock Pessimism Removal (CPR):    0.498ns
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.954ns
+    Source Clock Delay      (SCD):    1.441ns
+    Clock Pessimism Removal (CPR):    0.249ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -2010,12 +1725,12 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.560     1.443    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X43Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/rx_data_reg[0]/C
+                         net (fo=204, routed)         0.558     1.441    key_de/clk_IBUF_BUFG
+    SLICE_X34Y36         FDCE                                         r  key_de/been_ready_reg/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X43Y58         FDCE (Prop_fdce_C_Q)         0.141     1.584 r  key_de/inst/inst/Ps2Interface_i/rx_data_reg[0]/Q
-                         net (fo=3, routed)           0.141     1.725    key_de/inst/inst/rx_data[0]
-    SLICE_X42Y56         FDCE                                         r  key_de/inst/inst/key_in_reg[0]/D
+    SLICE_X34Y36         FDCE (Prop_fdce_C_Q)         0.148     1.589 r  key_de/been_ready_reg/Q
+                         net (fo=3, routed)           0.243     1.832    key_de/op/been_ready
+    SLICE_X39Y36         FDRE                                         r  key_de/op/signal_delay_reg/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -2025,29 +1740,143 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/inst/inst/clk
-    SLICE_X42Y56         FDCE                                         r  key_de/inst/inst/key_in_reg[0]/C
-                         clock pessimism             -0.498     1.460    
-    SLICE_X42Y56         FDCE (Hold_fdce_C_D)         0.059     1.519    key_de/inst/inst/key_in_reg[0]
+                         net (fo=204, routed)         0.827     1.954    key_de/op/clk_IBUF_BUFG
+    SLICE_X39Y36         FDRE                                         r  key_de/op/signal_delay_reg/C
+                         clock pessimism             -0.249     1.705    
+    SLICE_X39Y36         FDRE (Hold_fdre_C_D)         0.017     1.722    key_de/op/signal_delay_reg
   -------------------------------------------------------------------
-                         required time                         -1.519    
-                         arrival time                           1.725    
+                         required time                         -1.722    
+                         arrival time                           1.832    
   -------------------------------------------------------------------
-                         slack                                  0.206    
+                         slack                                  0.110    
 
-Slack (MET) :             0.206ns  (arrival time - required time)
-  Source:                 key_de/key_reg[6]/C
+Slack (MET) :             0.130ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/key_down_reg[90]/D
+  Destination:            music/btSpeedGen/count_reg[8]/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.343ns  (logic 0.209ns (60.964%)  route 0.134ns (39.036%))
+  Data Path Delay:        0.533ns  (logic 0.371ns (69.589%)  route 0.162ns (30.411%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.012 r  music/btSpeedGen/count_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.012    music/btSpeedGen/count_reg[8]_i_1_n_7
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[8]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y50          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.012    
+  -------------------------------------------------------------------
+                         slack                                  0.130    
+
+Slack (MET) :             0.143ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            music/btSpeedGen/count_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.546ns  (logic 0.384ns (70.313%)  route 0.162ns (29.687%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     2.025 r  music/btSpeedGen/count_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.025    music/btSpeedGen/count_reg[8]_i_1_n_5
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[10]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y50          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.025    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+Slack (MET) :             0.159ns  (arrival time - required time)
+  Source:                 key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.263ns  (logic 0.186ns (70.671%)  route 0.077ns (29.329%))
   Logic Levels:           1  (LUT6=1)
-  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.958ns
-    Source Clock Delay      (SCD):    1.444ns
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.949ns
+    Source Clock Delay      (SCD):    1.438ns
     Clock Pessimism Removal (CPR):    0.498ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -2059,14 +1888,14 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/clk_IBUF_BUFG
-    SLICE_X42Y55         FDCE                                         r  key_de/key_reg[6]/C
+                         net (fo=204, routed)         0.555     1.438    key_de/inst/inst/Ps2Interface_i/clk
+    SLICE_X32Y30         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y55         FDCE (Prop_fdce_C_Q)         0.164     1.608 r  key_de/key_reg[6]/Q
-                         net (fo=3, routed)           0.134     1.742    key_de/op/Q[0]
-    SLICE_X42Y53         LUT6 (Prop_lut6_I1_O)        0.045     1.787 r  key_de/op/key_down[90]_i_1/O
-                         net (fo=1, routed)           0.000     1.787    key_de/op_n_0
-    SLICE_X42Y53         FDCE                                         r  key_de/key_down_reg[90]/D
+    SLICE_X32Y30         FDCE (Prop_fdce_C_Q)         0.141     1.579 r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[6]/Q
+                         net (fo=3, routed)           0.077     1.656    key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg_n_0_[6]
+    SLICE_X33Y30         LUT6 (Prop_lut6_I5_O)        0.045     1.701 r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.701    key_de/inst/inst/Ps2Interface_i/FSM_onehot_state[0]_i_1_n_0
+    SLICE_X33Y30         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -2076,30 +1905,30 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.831     1.958    key_de/clk_IBUF_BUFG
-    SLICE_X42Y53         FDCE                                         r  key_de/key_down_reg[90]/C
-                         clock pessimism             -0.498     1.460    
-    SLICE_X42Y53         FDCE (Hold_fdce_C_D)         0.121     1.581    key_de/key_down_reg[90]
+                         net (fo=204, routed)         0.822     1.949    key_de/inst/inst/Ps2Interface_i/clk
+    SLICE_X33Y30         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[0]/C
+                         clock pessimism             -0.498     1.451    
+    SLICE_X33Y30         FDCE (Hold_fdce_C_D)         0.091     1.542    key_de/inst/inst/Ps2Interface_i/FSM_onehot_state_reg[0]
   -------------------------------------------------------------------
-                         required time                         -1.581    
-                         arrival time                           1.787    
+                         required time                         -1.542    
+                         arrival time                           1.701    
   -------------------------------------------------------------------
-                         slack                                  0.206    
+                         slack                                  0.159    
 
-Slack (MET) :             0.206ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/Ps2Interface_i/frame_reg[5]/C
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/Ps2Interface_i/rx_data_reg[4]/D
+  Destination:            music/btSpeedGen/count_reg[9]/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.237ns  (logic 0.148ns (62.441%)  route 0.089ns (37.559%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.443ns
-    Clock Pessimism Removal (CPR):    0.501ns
+  Data Path Delay:        0.569ns  (logic 0.407ns (71.513%)  route 0.162ns (28.487%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -2110,12 +1939,20 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.560     1.443    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X42Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/frame_reg[5]/C
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X42Y58         FDCE (Prop_fdce_C_Q)         0.148     1.591 r  key_de/inst/inst/Ps2Interface_i/frame_reg[5]/Q
-                         net (fo=3, routed)           0.089     1.680    key_de/inst/inst/Ps2Interface_i/p_0_in[4]
-    SLICE_X43Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/rx_data_reg[4]/D
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.089     2.048 r  music/btSpeedGen/count_reg[8]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.048    music/btSpeedGen/count_reg[8]_i_1_n_6
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -2125,30 +1962,30 @@ Slack (MET) :             0.206ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.830     1.957    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X43Y58         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/rx_data_reg[4]/C
-                         clock pessimism             -0.501     1.456    
-    SLICE_X43Y58         FDCE (Hold_fdce_C_D)         0.018     1.474    key_de/inst/inst/Ps2Interface_i/rx_data_reg[4]
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[9]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y50          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[9]
   -------------------------------------------------------------------
-                         required time                         -1.474    
-                         arrival time                           1.680    
+                         required time                         -1.882    
+                         arrival time                           2.048    
   -------------------------------------------------------------------
-                         slack                                  0.206    
+                         slack                                  0.166    
 
-Slack (MET) :             0.210ns  (arrival time - required time)
-  Source:                 key_de/inst/inst/tx_data_reg[1]/C
+Slack (MET) :             0.168ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            key_de/inst/inst/Ps2Interface_i/frame_reg[9]/D
+  Destination:            music/btSpeedGen/count_reg[11]/D
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk_pin
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        0.366ns  (logic 0.186ns (50.760%)  route 0.180ns (49.240%))
-  Logic Levels:           1  (LUT5=1)
-  Clock Path Skew:        0.035ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.957ns
-    Source Clock Delay      (SCD):    1.444ns
-    Clock Pessimism Removal (CPR):    0.478ns
+  Data Path Delay:        0.571ns  (logic 0.409ns (71.612%)  route 0.162ns (28.388%))
+  Logic Levels:           3  (CARRY4=2 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -2159,14 +1996,20 @@ Slack (MET) :             0.210ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.561     1.444    key_de/inst/inst/clk
-    SLICE_X45Y57         FDCE                                         r  key_de/inst/inst/tx_data_reg[1]/C
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X45Y57         FDCE (Prop_fdce_C_Q)         0.141     1.585 r  key_de/inst/inst/tx_data_reg[1]/Q
-                         net (fo=5, routed)           0.180     1.766    key_de/inst/inst/Ps2Interface_i/frame_reg[4]_0[0]
-    SLICE_X42Y57         LUT5 (Prop_lut5_I2_O)        0.045     1.811 r  key_de/inst/inst/Ps2Interface_i/frame[9]_i_1/O
-                         net (fo=1, routed)           0.000     1.811    key_de/inst/inst/Ps2Interface_i/frame[9]_i_1_n_0
-    SLICE_X42Y57         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/frame_reg[9]/D
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.091     2.050 r  music/btSpeedGen/count_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.050    music/btSpeedGen/count_reg[8]_i_1_n_4
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -2176,15 +2019,186 @@ Slack (MET) :             0.210ns  (arrival time - required time)
     W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
-                         net (fo=204, routed)         0.830     1.957    key_de/inst/inst/Ps2Interface_i/clk
-    SLICE_X42Y57         FDCE                                         r  key_de/inst/inst/Ps2Interface_i/frame_reg[9]/C
-                         clock pessimism             -0.478     1.479    
-    SLICE_X42Y57         FDCE (Hold_fdce_C_D)         0.121     1.600    key_de/inst/inst/Ps2Interface_i/frame_reg[9]
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y50          FDCE                                         r  music/btSpeedGen/count_reg[11]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y50          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[11]
   -------------------------------------------------------------------
-                         required time                         -1.600    
-                         arrival time                           1.811    
+                         required time                         -1.882    
+                         arrival time                           2.050    
   -------------------------------------------------------------------
-                         slack                                  0.210    
+                         slack                                  0.168    
+
+Slack (MET) :             0.170ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            music/btSpeedGen/count_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.573ns  (logic 0.411ns (71.711%)  route 0.162ns (28.289%))
+  Logic Levels:           4  (CARRY4=3 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.999 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.999    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     2.052 r  music/btSpeedGen/count_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.052    music/btSpeedGen/count_reg[12]_i_1_n_7
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[12]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y51          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.052    
+  -------------------------------------------------------------------
+                         slack                                  0.170    
+
+Slack (MET) :             0.177ns  (arrival time - required time)
+  Source:                 key_de/been_extend_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            key_de/key_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.547ns  (logic 0.208ns (38.010%)  route 0.339ns (61.990%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.263ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.954ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.249ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.559     1.442    key_de/clk_IBUF_BUFG
+    SLICE_X34Y37         FDCE                                         r  key_de/been_extend_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X34Y37         FDCE (Prop_fdce_C_Q)         0.164     1.606 r  key_de/been_extend_reg/Q
+                         net (fo=2, routed)           0.339     1.945    key_de/been_extend
+    SLICE_X36Y36         LUT2 (Prop_lut2_I1_O)        0.044     1.989 r  key_de/key[9]_i_2/O
+                         net (fo=1, routed)           0.000     1.989    key_de/next_key0_in[9]
+    SLICE_X36Y36         FDCE                                         r  key_de/key_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.827     1.954    key_de/clk_IBUF_BUFG
+    SLICE_X36Y36         FDCE                                         r  key_de/key_reg[9]/C
+                         clock pessimism             -0.249     1.705    
+    SLICE_X36Y36         FDCE (Hold_fdce_C_D)         0.107     1.812    key_de/key_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -1.812    
+                         arrival time                           1.989    
+  -------------------------------------------------------------------
+                         slack                                  0.177    
+
+Slack (MET) :             0.183ns  (arrival time - required time)
+  Source:                 music/btSpeedGen/count_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            music/btSpeedGen/count_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.586ns  (logic 0.424ns (72.339%)  route 0.162ns (27.661%))
+  Logic Levels:           4  (CARRY4=3 LUT2=1)
+  Clock Path Skew:        0.269ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.992ns
+    Source Clock Delay      (SCD):    1.479ns
+    Clock Pessimism Removal (CPR):    0.244ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.631     0.858    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.596     1.479    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y49          FDCE                                         r  music/btSpeedGen/count_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y49          FDCE (Prop_fdce_C_Q)         0.164     1.643 r  music/btSpeedGen/count_reg[7]/Q
+                         net (fo=3, routed)           0.161     1.805    music/btSpeedGen/count_reg[7]
+    SLICE_X2Y49          LUT2 (Prop_lut2_I1_O)        0.045     1.850 r  music/btSpeedGen/count[4]_i_2/O
+                         net (fo=1, routed)           0.000     1.850    music/btSpeedGen/count[4]_i_2_n_0
+    SLICE_X2Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.959 r  music/btSpeedGen/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.959    music/btSpeedGen/count_reg[4]_i_1_n_0
+    SLICE_X2Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.999 r  music/btSpeedGen/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.999    music/btSpeedGen/count_reg[8]_i_1_n_0
+    SLICE_X2Y51          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     2.065 r  music/btSpeedGen/count_reg[12]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.065    music/btSpeedGen/count_reg[12]_i_1_n_5
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.685     1.099    clk_IBUF
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
+                         net (fo=204, routed)         0.864     1.992    music/btSpeedGen/clk_IBUF_BUFG
+    SLICE_X2Y51          FDCE                                         r  music/btSpeedGen/count_reg[14]/C
+                         clock pessimism             -0.244     1.748    
+    SLICE_X2Y51          FDCE (Hold_fdce_C_D)         0.134     1.882    music/btSpeedGen/count_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.882    
+                         arrival time                           2.065    
+  -------------------------------------------------------------------
+                         slack                                  0.183    
 
 
 
@@ -2199,35 +2213,35 @@ Sources:            { clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
 Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1  clk_IBUF_BUFG_inst/I
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X3Y56    music/btSpeedGen/PWM_reg/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y51    music/btSpeedGen/count_reg[0]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y53    music/btSpeedGen/count_reg[10]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y53    music/btSpeedGen/count_reg[11]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y54    music/btSpeedGen/count_reg[12]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y54    music/btSpeedGen/count_reg[13]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y54    music/btSpeedGen/count_reg[14]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y54    music/btSpeedGen/count_reg[15]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y55    music/btSpeedGen/count_reg[16]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y46   CD0/count_reg[0]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X39Y46   CD0/count_reg[1]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y43   CD2/count_reg[10]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y43   CD2/count_reg[11]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y44   CD2/count_reg[12]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y44   CD2/count_reg[13]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y44   CD2/count_reg[14]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y44   CD2/count_reg[15]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y45   CD2/count_reg[16]/C
-Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X37Y45   CD2/count_reg[17]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X3Y56    music/btSpeedGen/PWM_reg/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[10]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[11]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[12]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[13]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[14]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[15]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y55    music/btSpeedGen/count_reg[16]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y55    music/btSpeedGen/count_reg[17]/C
-High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y55    music/btSpeedGen/count_reg[18]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X1Y54    music/btSpeedGen/PWM_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y48    music/btSpeedGen/count_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y50    music/btSpeedGen/count_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y50    music/btSpeedGen/count_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y51    music/btSpeedGen/count_reg[12]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y51    music/btSpeedGen/count_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y51    music/btSpeedGen/count_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y51    music/btSpeedGen/count_reg[15]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X2Y52    music/btSpeedGen/count_reg[16]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y85    music/toneGen/PWM_reg/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   CD0/count_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   CD0/count_reg[1]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   CD2/count_reg[16]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   CD2/count_reg[17]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   CD2/count_reg[18]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   CD2/count_reg[19]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   CD2/count_reg[20]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   CD2/count_reg[21]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X3Y85    music/toneGen/count_reg[20]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X1Y54    music/btSpeedGen/PWM_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48    music/btSpeedGen/count_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y48    music/btSpeedGen/count_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[20]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[21]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[22]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y53    music/btSpeedGen/count_reg[23]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[24]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[25]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X2Y54    music/btSpeedGen/count_reg[26]/C
 
 
 
