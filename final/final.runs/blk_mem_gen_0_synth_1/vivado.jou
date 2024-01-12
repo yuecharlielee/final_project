@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Jan 11 22:25:55 2024
-# Process ID: 12660
-# Current directory: D:/hardware_design/final_test/final_project/final/final.runs/blk_mem_gen_0_synth_1
+# Start of session at: Fri Jan 12 01:07:34 2024
+# Process ID: 21960
+# Current directory: C:/final_project/final/final.runs/blk_mem_gen_0_synth_1
 # Command line: vivado.exe -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
-# Log file: D:/hardware_design/final_test/final_project/final/final.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
-# Journal file: D:/hardware_design/final_test/final_project/final/final.runs/blk_mem_gen_0_synth_1\vivado.jou
+# Log file: C:/final_project/final/final.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: C:/final_project/final/final.runs/blk_mem_gen_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source blk_mem_gen_0.tcl -notrace

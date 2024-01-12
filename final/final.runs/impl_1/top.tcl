@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/hardware_design/final_test/final_project/final/final.runs/impl_1/top.tcl"
+  variable script "C:/final_project/final/final.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,20 +130,20 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/hardware_design/final_test/final_project/final/final.cache/wt [current_project]
-  set_property parent.project_path D:/hardware_design/final_test/final_project/final/final.xpr [current_project]
-  set_property ip_repo_paths {{D:/hardware_design/final_test/final_project/Keyboard Sample Code/ip}} [current_project]
+  set_property webtalk.parent_dir C:/final_project/final/final.cache/wt [current_project]
+  set_property parent.project_path C:/final_project/final/final.xpr [current_project]
+  set_property ip_repo_paths {{C:/final_project/Keyboard Sample Code/ip}} [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/hardware_design/final_test/final_project/final/final.cache/ip [current_project]
+  set_property ip_output_repo C:/final_project/final/final.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/hardware_design/final_test/final_project/final/final.runs/synth_1/top.dcp
-  read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
-  read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  add_files -quiet C:/final_project/final/final.runs/synth_1/top.dcp
+  read_ip -quiet C:/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
+  read_ip -quiet C:/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/hardware_design/final_test/final_project/Basys3_Master.xdc
+  read_xdc C:/final_project/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
