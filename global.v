@@ -13,7 +13,7 @@
 `define select_state 0
 `define falling_state 1
 `define finish_state 2
-
+`define compute_state 3
 //type of ball
 `define ball_size_0 0
 `define ball_size_1 11 //apple

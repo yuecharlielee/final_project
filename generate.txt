@@ -1,0 +1,310 @@
+x_dis_0 = (x_pos > x_0) ? (x_pos - x_0) * (x_pos - x_0) : (x_0 - x_pos) * (x_0 - x_pos);
+y_dis_0 = (y_pos > y_0) ? (y_pos - y_0) * (y_pos - y_0) : (y_0 - y_pos) * (y_0 - y_pos);
+x_dis_1 = (x_pos > x_1) ? (x_pos - x_1) * (x_pos - x_1) : (x_1 - x_pos) * (x_1 - x_pos);
+y_dis_1 = (y_pos > y_1) ? (y_pos - y_1) * (y_pos - y_1) : (y_1 - y_pos) * (y_1 - y_pos);
+x_dis_2 = (x_pos > x_2) ? (x_pos - x_2) * (x_pos - x_2) : (x_2 - x_pos) * (x_2 - x_pos);
+y_dis_2 = (y_pos > y_2) ? (y_pos - y_2) * (y_pos - y_2) : (y_2 - y_pos) * (y_2 - y_pos);
+x_dis_3 = (x_pos > x_3) ? (x_pos - x_3) * (x_pos - x_3) : (x_3 - x_pos) * (x_3 - x_pos);
+y_dis_3 = (y_pos > y_3) ? (y_pos - y_3) * (y_pos - y_3) : (y_3 - y_pos) * (y_3 - y_pos);
+x_dis_4 = (x_pos > x_4) ? (x_pos - x_4) * (x_pos - x_4) : (x_4 - x_pos) * (x_4 - x_pos);
+y_dis_4 = (y_pos > y_4) ? (y_pos - y_4) * (y_pos - y_4) : (y_4 - y_pos) * (y_4 - y_pos);
+x_dis_5 = (x_pos > x_5) ? (x_pos - x_5) * (x_pos - x_5) : (x_5 - x_pos) * (x_5 - x_pos);
+y_dis_5 = (y_pos > y_5) ? (y_pos - y_5) * (y_pos - y_5) : (y_5 - y_pos) * (y_5 - y_pos);
+x_dis_6 = (x_pos > x_6) ? (x_pos - x_6) * (x_pos - x_6) : (x_6 - x_pos) * (x_6 - x_pos);
+y_dis_6 = (y_pos > y_6) ? (y_pos - y_6) * (y_pos - y_6) : (y_6 - y_pos) * (y_6 - y_pos);
+x_dis_7 = (x_pos > x_7) ? (x_pos - x_7) * (x_pos - x_7) : (x_7 - x_pos) * (x_7 - x_pos);
+y_dis_7 = (y_pos > y_7) ? (y_pos - y_7) * (y_pos - y_7) : (y_7 - y_pos) * (y_7 - y_pos);
+x_dis_8 = (x_pos > x_8) ? (x_pos - x_8) * (x_pos - x_8) : (x_8 - x_pos) * (x_8 - x_pos);
+y_dis_8 = (y_pos > y_8) ? (y_pos - y_8) * (y_pos - y_8) : (y_8 - y_pos) * (y_8 - y_pos);
+x_dis_9 = (x_pos > x_9) ? (x_pos - x_9) * (x_pos - x_9) : (x_9 - x_pos) * (x_9 - x_pos);
+y_dis_9 = (y_pos > y_9) ? (y_pos - y_9) * (y_pos - y_9) : (y_9 - y_pos) * (y_9 - y_pos);
+s_dis_0 = (ball_size + s_0) * (ball_size + s_0);
+s_dis_1 = (ball_size + s_1) * (ball_size + s_1);
+s_dis_2 = (ball_size + s_2) * (ball_size + s_2);
+s_dis_3 = (ball_size + s_3) * (ball_size + s_3);
+s_dis_4 = (ball_size + s_4) * (ball_size + s_4);
+s_dis_5 = (ball_size + s_5) * (ball_size + s_5);
+s_dis_6 = (ball_size + s_6) * (ball_size + s_6);
+s_dis_7 = (ball_size + s_7) * (ball_size + s_7);
+s_dis_8 = (ball_size + s_8) * (ball_size + s_8);
+s_dis_9 = (ball_size + s_9) * (ball_size + s_9);
+if ((counter > 0) & ((x_dis_0 + y_dis_0) <= (ball_size + s_0) * (ball_size + s_0))) begin
+    collision = collision + 1;
+    if (x_pos < x_0) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_0) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 1) & ((x_dis_1 + y_dis_1) <= (ball_size + s_1) * (ball_size + s_1))) begin
+    collision = collision + 1;
+    if (x_pos < x_1) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_1) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 2) & ((x_dis_2 + y_dis_2) <= (ball_size + s_2) * (ball_size + s_2))) begin
+    collision = collision + 1;
+    if (x_pos < x_2) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_2) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 3) & ((x_dis_3 + y_dis_3) <= (ball_size + s_3) * (ball_size + s_3))) begin
+    collision = collision + 1;
+    if (x_pos < x_3) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_3) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 4) & ((x_dis_4 + y_dis_4) <= (ball_size + s_4) * (ball_size + s_4))) begin
+    collision = collision + 1;
+    if (x_pos < x_4) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_4) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 5) & ((x_dis_5 + y_dis_5) <= (ball_size + s_5) * (ball_size + s_5))) begin
+    collision = collision + 1;
+    if (x_pos < x_5) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_5) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 6) & ((x_dis_6 + y_dis_6) <= (ball_size + s_6) * (ball_size + s_6))) begin
+    collision = collision + 1;
+    if (x_pos < x_6) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_6) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 7) & ((x_dis_7 + y_dis_7) <= (ball_size + s_7) * (ball_size + s_7))) begin
+    collision = collision + 1;
+    if (x_pos < x_7) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_7) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 8) & ((x_dis_8 + y_dis_8) <= (ball_size + s_8) * (ball_size + s_8))) begin
+    collision = collision + 1;
+    if (x_pos < x_8) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_8) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+
+if ((counter > 9) & ((x_dis_9 + y_dis_9) <= (ball_size + s_9) * (ball_size + s_9))) begin
+    collision = collision + 1;
+    if (x_pos < x_9) begin
+        next_x_pos = next_x_pos - 1;
+        next_y_pos = y_pos;
+    end
+    else if (x_pos > x_9) begin
+        next_x_pos = next_x_pos + 1;
+        next_y_pos = y_pos;
+    end
+    else begin 
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+
+    if(x_pos == `right_bound - ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+    if(x_pos == `left_bound + ball_size) begin
+        next_x_pos = x_pos;
+        next_y_pos = y_pos;
+        next_state = `finish_state;
+    end
+end
+

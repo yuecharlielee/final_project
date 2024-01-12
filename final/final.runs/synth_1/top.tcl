@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/hardware_design/final_test/final_project/final/final.runs/synth_1/top.tcl"
+  variable script "C:/final_project/final/final.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -79,36 +79,36 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/hardware_design/final_test/final_project/final/final.cache/wt [current_project]
-set_property parent.project_path D:/hardware_design/final_test/final_project/final/final.xpr [current_project]
+set_property webtalk.parent_dir C:/final_project/final/final.cache/wt [current_project]
+set_property parent.project_path C:/final_project/final/final.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths {{d:/hardware_design/final_test/final_project/Keyboard Sample Code/ip}} [current_project]
+set_property ip_repo_paths {{c:/final_project/Keyboard Sample Code/ip}} [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/hardware_design/final_test/final_project/final/final.cache/ip [current_project]
+set_property ip_output_repo c:/final_project/final/final.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files D:/hardware_design/final_test/final_project/Pictrans/out.coe
+add_files C:/final_project/Pictrans/out.coe
 read_verilog -library xil_defaultlib {
-  D:/hardware_design/final_test/final_project/KeyboardDecoder.v
-  D:/hardware_design/final_test/final_project/Keyboard_control.v
-  D:/hardware_design/final_test/final_project/clock_divisor.v
-  D:/hardware_design/final_test/final_project/mem_gen.v
-  D:/hardware_design/final_test/final_project/music.v
-  D:/hardware_design/final_test/final_project/musicmain.v
-  D:/hardware_design/final_test/final_project/onepulse.v
-  D:/hardware_design/final_test/final_project/player_control.v
-  D:/hardware_design/final_test/final_project/playerctrl.v
-  D:/hardware_design/final_test/final_project/pwm.v
-  D:/hardware_design/final_test/final_project/vga.v
-  D:/hardware_design/final_test/final_project/top.v
+  C:/final_project/KeyboardDecoder.v
+  C:/final_project/Keyboard_control.v
+  C:/final_project/clock_divisor.v
+  C:/final_project/mem_gen.v
+  C:/final_project/music.v
+  C:/final_project/musicmain.v
+  C:/final_project/onepulse.v
+  C:/final_project/player_control.v
+  C:/final_project/playerctrl.v
+  C:/final_project/pwm.v
+  C:/final_project/vga.v
+  C:/final_project/top.v
 }
-read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
+read_ip -quiet C:/final_project/final/final.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
 
-read_ip -quiet D:/hardware_design/final_test/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all d:/hardware_design/final_test/final_project/final/final.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+read_ip -quiet C:/final_project/final/final.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/final_project/final/final.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -119,8 +119,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/hardware_design/final_test/final_project/Basys3_Master.xdc
-set_property used_in_implementation false [get_files D:/hardware_design/final_test/final_project/Basys3_Master.xdc]
+read_xdc C:/final_project/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/final_project/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
